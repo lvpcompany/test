@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinos de Futsal - Versão Corrigida Completa</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Seção do vídeo - CORREÇÃO PRINCIPAL */
+        .video-section {
+            background: #000;
+            padding: 40px 0;
+            position: relative;
+            z-index: 1; /* Z-index baixo para o vídeo */
+            margin-bottom: 40px;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            background: #000;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Seção de preços - CORREÇÃO: Posicionamento adequado */
+        .pricing-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 60px 0;
+            position: relative;
+            z-index: 2; /* Z-index maior que o vídeo, mas sem sobreposição */
+            margin-top: 20px; /* Margem para separar do vídeo */
+        }
+
+        .pricing-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 100%;
+            position: relative;
+            /* REMOVIDO: position: absolute que causava sobreposição */
+            /* REMOVIDO: top, left, right que causavam posicionamento sobre o vídeo */
+        }
+
+        .pricing-card h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .price {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .price .old-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 18px;
+        }
+
+        .price .new-price {
+            color: #e74c3c;
+            font-size: 36px;
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .features {
+            list-style: none;
+            margin: 30px 0;
+        }
+
+        .features li {
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .features li:before {
+            content: "✓";
+            color: #27ae60;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* Botão de compra - CORREÇÃO: Posicionamento fixo */
+        .buy-button {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            transition: all 0.3s ease;
+            /* CORREÇÃO: Removido position: fixed que causava sobreposição */
+            position: relative;
+            z-index: 3;
+        }
+
+        .buy-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+        }
+
+        /* Seção de perguntas frequentes */
+        .faq-section {
+            background: #f8f9fa;
+            padding: 60px 0;
+            margin-top: 40px;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 32px;
+            color: #333;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            border-bottom: 1px solid #eee;
+        }
+
+        .faq-answer {
+            padding: 20px;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .pricing-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .pricing-card {
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+            
+            .video-container {
+                margin: 0 10px;
+            }
+            
+            .container {
+                padding: 0 10px;
+            }
+        }
+
+        /* CORREÇÕES ESPECÍFICAS PARA EVITAR SOBREPOSIÇÕES */
+        
+        /* Garantir que elementos flutuantes não sobreponham o vídeo */
+        .floating-elements {
+            position: relative;
+            z-index: 0; /* Z-index menor que o vídeo */
+        }
+        
+        /* Corrigir qualquer elemento com position absolute problemático */
+        .elementor-element {
+            position: relative !important;
+        }
+        
+        /* Garantir que botões não fiquem sobre o vídeo */
+        .sticky-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000; /* Alto z-index, mas posicionado longe do vídeo */
+        }
+        
+        /* Correção para elementos Elementor que podem causar problemas */
+        .elementor-widget-video {
+            position: relative;
+            z-index: 10;
+            margin: 20px 0;
+        }
+        
+        .elementor-section {
+            position: relative;
+            clear: both;
+        }
+        
+        /* Garantir que colunas não sobreponham */
+        .elementor-column {
+            position: relative;
+            float: none;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        /* 
+ * CORREÇÕES CSS PARA PROBLEMAS DE SOBREPOSIÇÃO NO VÍDEO
+ * Aplicar estas regras ao site WordPress/Elementor existente
+ */
+
+/* ===== CORREÇÕES PRINCIPAIS ===== */
+
+/* 1. Garantir que o vídeo tenha z-index adequado */
+.elementor-widget-video,
+.elementor-video-wrapper,
+.elementor-video-iframe {
+    position: relative !important;
+    z-index: 10 !important;
+    margin: 20px 0 !important;
+}
+
+/* 2. Corrigir elementos que podem estar sobrepostos */
+.elementor-element-20b7b4ce {
+    /* Coluna de preços - remover posicionamento absoluto se existir */
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    z-index: 5 !important;
+    margin-top: 40px !important;
+}
+
+/* 3. Corrigir botão de compra */
+.elementor-element-12f593c0 .elementor-button,
+.AB .elementor-button {
+    /* Remover posicionamento fixo que pode sobrepor o vídeo */
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    z-index: 8 !important;
+}
+
+/* 4. Garantir que seções não sobreponham */
+.elementor-section {
+    position: relative !important;
+    clear: both !important;
+    margin-bottom: 20px !important;
+}
+
+/* 5. Corrigir colunas do Elementor */
+.elementor-column {
+    position: relative !important;
+    float: none !important;
+    margin-bottom: 20px !important;
+}
+
+/* ===== CORREÇÕES ESPECÍFICAS POR ELEMENTO ===== */
+
+/* Seção do vídeo */
+.elementor-element-7b4b4c7c {
+    position: relative !important;
+    z-index: 15 !important;
+    margin: 30px 0 !important;
+    padding: 20px 0 !important;
+}
+
+/* Container do vídeo */
+.elementor-element-7b4b4c7c .elementor-video-wrapper {
+    background: #000 !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3) !important;
+    margin: 0 auto !important;
+    max-width: 800px !important;
+}
+
+/* Seção de agendamento/preços */
+#agendamento {
+    position: relative !important;
+    z-index: 5 !important;
+    margin-top: 50px !important;
+    clear: both !important;
+}
+
+/* ===== CORREÇÕES RESPONSIVAS ===== */
+
+/* Desktop */
+@media (min-width: 1025px) {
+    .elementor-element-20b7b4ce {
+        margin-top: 60px !important;
+    }
+    
+    .elementor-widget-video {
+        margin-bottom: 40px !important;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .elementor-element-20b7b4ce {
+        margin-top: 40px !important;
+        width: 100% !important;
+    }
+    
+    .elementor-column {
+        width: 100% !important;
+        margin-bottom: 30px !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .elementor-element-20b7b4ce {
+        margin-top: 30px !important;
+        width: 100% !important;
+        padding: 20px !important;
+    }
+    
+    .elementor-widget-video {
+        margin: 20px 0 !important;
+    }
+    
+    .elementor-video-wrapper {
+        margin: 0 10px !important;
+    }
+    
+    /* Garantir que botões não fiquem sobre o vídeo em mobile */
+    .elementor-button {
+        position: relative !important;
+        margin: 20px 0 !important;
+    }
+}
+
+/* ===== CORREÇÕES PARA ELEMENTOS FLUTUANTES ===== */
+
+/* Corrigir elementos com position: fixed problemáticos */
+.elementor-element[data-settings*="position"] {
+    position: relative !important;
+}
+
+/* Elementos sticky que podem causar problemas */
+.elementor-sticky {
+    position: relative !important;
+    top: auto !important;
+}
+
+/* ===== CORREÇÕES PARA ANIMAÇÕES ===== */
+
+/* Garantir que animações não causem sobreposição */
+.elementor-invisible {
+    position: relative !important;
+}
+
+.animated {
+    position: relative !important;
+    z-index: auto !important;
+}
+
+/* ===== CORREÇÕES GERAIS DE LAYOUT ===== */
+
+/* Garantir fluxo normal do documento */
+.elementor-container {
+    position: relative !important;
+    overflow: visible !important;
+}
+
+.elementor-row {
+    position: relative !important;
+    clear: both !important;
+}
+
+/* Corrigir gaps entre seções */
+.elementor-top-section {
+    margin-bottom: 20px !important;
+}
+
+/* ===== CORREÇÕES PARA WIDGETS ESPECÍFICOS ===== */
+
+/* Widget de imagem */
+.elementor-widget-image {
+    position: relative !important;
+    z-index: 3 !important;
+}
+
+/* Widget de botão */
+.elementor-widget-button {
+    position: relative !important;
+    z-index: 6 !important;
+    margin: 15px 0 !important;
+}
+
+/* Widget de heading */
+.elementor-widget-heading {
+    position: relative !important;
+    z-index: 4 !important;
+}
+
+/* Widget de lista de ícones */
+.elementor-widget-icon-list {
+    position: relative !important;
+    z-index: 4 !important;
+}
+
+/* ===== CORREÇÕES DE EMERGÊNCIA ===== */
+
+/* Se ainda houver problemas, aplicar estas regras mais agressivas */
+.video-overlay-fix {
+    /* Aplicar esta classe ao container do vídeo */
+    position: relative !important;
+    z-index: 999 !important;
+    background: #000 !important;
+    padding: 20px !important;
+    margin: 30px 0 !important;
+    border-radius: 10px !important;
+}
+
+.content-below-video {
+    /* Aplicar esta classe ao conteúdo que vem após o vídeo */
+    position: relative !important;
+    z-index: 1 !important;
+    margin-top: 50px !important;
+    clear: both !important;
+}
+
+/* ===== INSTRUÇÕES DE USO ===== */
+
+/*
+Para aplicar estas correções:
+
+1. No WordPress, vá em Aparência > Personalizar > CSS Adicional
+2. Cole todo este código CSS
+3. Clique em "Publicar"
+
+OU
+
+1. No Elementor, edite a página
+2. Vá em Configurações da Página > Avançado > CSS Personalizado
+3. Cole este código
+4. Atualize a página
+
+CORREÇÕES ESPECÍFICAS POR PROBLEMA:
+
+- Se o botão ainda estiver sobre o vídeo: adicione a classe "content-below-video" ao container do botão
+- Se a seção de preços estiver sobre o vídeo: adicione a classe "video-overlay-fix" ao container do vídeo
+- Para problemas em mobile: verifique as media queries acima
+
+TESTE SEMPRE EM:
+- Desktop (1920px+)
+- Tablet (768px-1024px)  
+- Mobile (até 767px)
+*/
+
+    </style>
+</head>
+<body>
+    <!-- Seção do Vídeo - CORRIGIDA -->
+    <section class="video-section">
+        <div class="container">
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <!-- Substitua o src pelo URL real do vídeo -->
+                    <iframe 
+                        src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                        title="Vídeo de Apresentação - Treinos de Futsal"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Preços - CORRIGIDA -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="pricing-container">
+                <div class="pricing-card">
+                    <img src="https://treinosdefutsal.conteudosesportivos.com.br/wp-content/uploads/2023/09/party___3_-removebg-preview.png" 
+                         alt="Treinos de Futsal" style="width: 100px; height: 100px; margin: 0 auto 20px; display: block;">
+                    
+                    <h2>PLANO PREMIUM</h2>
+                    
+                    <ul class="features">
+                        <li>ACESSO PERMANENTE</li>
+                        <li>+500 TREINOS EM VÍDEOS</li>
+                        <li>Aplicativos de treinos</li>
+                        <li>Certificado incluso</li>
+                        <li>Acesso a todos os bônus</li>
+                        <li>Ebook com alongamento e exercícios</li>
+                        <li>Apostila de alta performance</li>
+                        <li>Apostila de treinamento funcional</li>
+                        <li>Acesso imediato</li>
+                    </ul>
+                    
+                    <div class="price">
+                        <span class="old-price">De R$197,00</span>
+                        <span class="new-price">R$34,90</span>
+                    </div>
+                    
+                    <a href="https://pay.hotmart.com/H101098569B?checkoutMode=10" class="buy-button">
+                        COMPRAR AGORA MESMO!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Perguntas Frequentes -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-container">
+                <h2 class="faq-title">PERGUNTAS FREQUENTES</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Como recebo o material?</div>
+                    <div class="faq-answer">
+                        O acesso ao material é enviado por e-mail no ato da compra, após a realização do pagamento, 
+                        o envio é feito pela <strong>PLATAFORMA DA HOTMART</strong>, onde o produto se encontra hospedado 
+                        e também enviamos o nosso aplicativo para seu e-mail.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Em quanto tempo recebo o material?</div>
+                    <div class="faq-answer">
+                        O acesso do material é enviado automaticamente e normalmente demora apenas 5 minutos para 
+                        <strong>compras feitas no pix ou cartão de crédito</strong>.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Ainda não recebi o material, o que fazer?</div>
+                    <div class="faq-answer">
+                        Verifique seu email na pasta <strong>spam/lixo eletrônico</strong>. 
+                        Caso não tenha encontrado, não se preocupe nossa equipe entra em contato com todos os clientes 
+                        pelo <strong>WhatsApp</strong> para sanar todas as dúvidas.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Qual é o tempo de acesso desse material?</div>
+                    <div class="faq-answer">
+                        O acesso ao <strong>PLANO PREMIUM é vitalício</strong> já o <strong>PLANO BÁSICO</strong> 
+                        o acesso é 1 ano. Então fica a sua escolha qual dos dois planos gostaria de adquirir.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript para as perguntas frequentes
+        document.querySelectorAll(".faq-question").forEach(question => {
+            question.addEventListener("click", () => {
+                const faqItem = question.parentElement;
+                faqItem.classList.toggle("active");
+            });
+        });
+
+        // Garantir que o vídeo não seja sobreposto por elementos dinâmicos
+        function fixVideoOverlay() {
+            const videoSection = document.querySelector(".video-section");
+            const pricingSection = document.querySelector(".pricing-section");
+            
+            if (videoSection && pricingSection) {
+                // Garantir espaçamento adequado
+                const videoRect = videoSection.getBoundingClientRect();
+                pricingSection.style.marginTop = "40px";
+            }
+        }
+
+        // Executar correção quando a página carregar
+        window.addEventListener("load", fixVideoOverlay);
+        window.addEventListener("resize", fixVideoOverlay);
+    </script>
+</body>
+</html>
