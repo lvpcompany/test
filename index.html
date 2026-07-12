@@ -25,8 +25,720 @@
     <meta name="twitter:card" content="https://engenhariavinicius.com.br/images/flex/Exemplos/FLEXVIGAS.png">
     <meta property="twitter:description" content="Aprenda a como análisa, calcular vigas de uma forma fácil e rápido, sem dores de cabeça e cálculos, Interface Simples, Relatórios Instantâneos, Cálculos à Flexão (Vigas Retangulares e T), Cálculos à Cisalhamento (Vigas Retangulares e T).">
 
-    <link rel="stylesheet" href="/css/flexvigas.css?v=d1FqBxj-ovX27Iy8OJTaTIzO22fxFfz4KCMxEAbpw9Q" />
-    <link rel="shortcut icon" href="/images/flex/Exemplos/FLEXVIGAS.png" type="image/x-icon">
+    <style>
+:root {
+    --texto: #333;
+    --fundo-branco: #f9f9f9;
+    --azul: #106ebe;
+    --azul-escuro: #020024;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+input,
+textarea,
+label,
+form,
+button {
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: var(--fundo-branco);
+    overflow-x: hidden;
+}
+
+/* Topo */
+
+.header {
+    width: 100%;
+    margin-top: .3rem;
+    padding: 1rem .8rem .5rem;
+    text-align: center;
+    background-color: var(--fundo-branco);
+    border-bottom: 1px solid var(--azul);
+}
+
+.header h3 {
+    font-size: 1.7rem;
+    color: transparent;
+    background: rgb(2, 0, 36);
+    background-image: linear-gradient(90deg, rgba(2, 0, 36, 1) 8%, rgba(16, 110, 190, 1) 76%, rgba(0, 212, 255, 1) 99%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Conteudos */
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 5vh auto;
+}
+
+.principal {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
+}
+
+.fundo {
+    width: 100%;
+    background-image: url("https://engenhariavinicius.com.br/images/flex/fundo-topo.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.fundo .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.87;
+    width: 100%;
+    height: 100%;
+}
+
+.principal .conteudo {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    z-index: 1;
+    color: white;
+}
+
+.conteudo .conteudo__item h1 {
+    font-size: 2.2rem;
+    line-height: 2.9rem;
+    padding: 0 .5rem;
+    text-transform: uppercase;
+    margin-bottom: 27px;
+}
+
+.subtitulo {
+    width: 80%;
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 8px auto;
+}
+
+.conteudo .conteudo__item .video {
+    margin-bottom: 27px;
+}
+
+.conteudo .conteudo__item .video iframe {
+    border-radius: 8px;
+    width: 100%;
+    height: 420px;
+}
+
+.conteudo .conteudo__item .subtitulo-2 {
+    font-size: 2.2rem;
+    line-height: 3.5rem;
+    text-align: left;
+    padding: 0 .8rem;
+}
+
+.btn {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-saibamais {
+    background-color: var(--azul-escuro);
+    background-image: linear-gradient(90deg, rgba(2, 0, 36, 1) 8%, rgb(2, 61, 112) 76%, rgb(2, 89, 107) 99%);
+    padding: .9rem 2.5rem;
+    border-radius: 12px;
+    margin-top: 15px;
+    display: inline-block;
+    border: 1px solid rgb(4, 0, 61);
+    text-transform: uppercase;
+    font-size: 1.4rem;
+}
+
+.btn-saibamais:hover,
+.btn-saibamais:focus,
+.btn-saibamais:active {
+    transition: all 400ms;
+    background-image: linear-gradient(90deg, rgb(2, 89, 107) 8%, rgb(2, 61, 112) 36%, rgba(2, 0, 36, 1) 99%);
+    border: 1px solid rgb(4, 0, 61);
+    transform: scale(1.1);
+}
+
+.principal-2 {
+    padding: 0 15px;
+    margin-top: 4rem;
+    background-color: #f9f9f9;
+}
+
+.principal-2 h1 {
+    text-align: center;
+    color: #333;
+}
+
+.borda {
+    width: 220px;
+    height: 5px;
+    margin: 8px auto 40px;
+    border-radius: 12px;
+    background-image: linear-gradient(90deg, rgba(2, 0, 36, 1) 8%, rgb(2, 61, 112) 76%, rgb(2, 89, 107) 99%);
+}
+
+.item-card {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: 0 auto 38px;
+}
+
+.item-card div h4 {
+    font-size: 1.5rem;
+    margin: 2rem 0 1.2rem;
+    color: #020024;
+    max-width: 480px;
+}
+
+.item-card div p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.item-card-image {
+    text-align: center;
+}
+
+.item-card-image img {
+    width: 100%;
+    height: 230px;
+    max-width: 350px;
+    border-radius: 6px;
+}
+
+.diferencial {
+    background-color: #ededed;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.diferencial-conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin: 1rem auto;
+    gap: 1.8rem;
+}
+
+.diferencial-conteudo article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.4rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.diferencial-conteudo article p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 15px;
+    max-width: 480px;
+    text-align: left;
+}
+
+.diferencial-conteudo article img {
+    width: 90%;
+    height: 250px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 8px -2px rgb(2, 0, 36);
+    margin: 0 auto;
+}
+
+.quatroPontos {
+    width: 100%;
+    padding: 28px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 8%, rgb(2, 61, 112) 76%, rgb(2, 89, 107) 99%);
+}
+
+.quatroPontos div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    margin: 0px auto;
+    width: 100%;
+    gap: .8rem;
+}
+
+.quatroPontos div {
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+}
+
+.conteudo-func {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    justify-items: center;
+    align-items: start;
+}
+
+.conteudo-func div p {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: .7rem .2rem;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.conteudo-func div img {
+    height: 400px;
+}
+
+.form {
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 3px;
+}
+
+.faq-item {
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 1px solid #dbd8d8;
+    padding-bottom: 12px;
+    transition: max-height 0.2s ease-out;
+}
+
+.faq-question h2 {
+    font-size: 1rem;
+    color: #333;
+}
+
+.faq-answer {
+    display: none;
+    margin-top: 10px;
+    transition: height 0.2s ease-out;
+    overflow: hidden;
+}
+
+.faq-answer p {
+    font-size: .8rem;
+    color: #333;
+    padding: 12px 12px 12px 20px;
+    width: 95%
+}
+
+.faq-question::before {
+    content: "";
+    background-image: url("https://engenhariavinicius.com.br/images/flex/Icones/down.svg");
+    background-size: cover;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.faq-question.open::before {
+    content: "";
+    background-image: url("https://engenhariavinicius.com.br/images/flex/Icones/top.svg");
+}
+
+.fundo2 {
+    background-color: #ededed;
+    padding: 12px;
+    margin-top: 0px;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    justify-content: space-between;
+    align-items: center;
+    gap: .7rem;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.card.planilha{
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+.card-item {
+    height: 200px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 4px 4px 12px -1px rgba(0, 0, 0, 0.479);
+    padding: 1rem .8rem;
+}
+
+.card-item.item2 {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.card-item.item3 {
+    height: 400px;
+    object-fit: cover;
+}
+
+.card-item p {
+    color: #333;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding-top: 12px;
+    padding-bottom: 8px;
+}
+
+.card-item.item2 p {
+    padding-top: 2px;
+    font-size: .9rem;
+    text-transform: uppercase;
+}
+
+.card-item.item3 p {
+    padding-top: 8px;
+    font-size: .96rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-image: linear-gradient(90deg, rgba(2, 0, 36, 1) 8%, rgb(2, 61, 112) 76%, rgb(2, 89, 107) 99%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: .5rem;
+}
+
+.card-item.item3 small {
+    display: inline-block;
+    padding-top: 2px;
+    text-align: left;
+    font-size: .88rem;
+}
+
+.card-item img {
+    width: 55px;
+    height: 55px;
+}
+
+.card-item.item2 img {
+    width: 72px;
+    height: 72px;
+}
+
+.card-item.item3 img {
+    width: 100%;
+    height: 172px;
+}
+
+.card-item svg {
+    fill: #030133;
+}
+
+.fundo2 div {
+    text-align: center;
+}
+
+.fundo2 div .centralizar {
+    margin-top: 2.1rem;
+}
+
+#garantir {
+    text-align: center;
+}
+
+#garantir div .subtitulo2 {
+    display: inline-block;
+    width: 80%;
+    font-size: 1rem;
+    color: #fff;
+    margin-top: 12px;
+}
+
+#garantir .container h1 {
+    color: #fff !important;
+    font-size: 2.4rem;
+}
+
+.fundoDegrade {
+    width: 100%;
+    color: white;
+    background-image: linear-gradient(90deg, rgba(2, 0, 36, 1) 8%, rgb(2, 61, 112) 76%, rgb(2, 89, 107) 99%);
+    padding: 12px 0px;
+}
+
+.card-plan {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
+    justify-content: center;
+    align-items: center;
+    padding: 18px;
+    color: #333;
+    width: 100%;
+    margin: 20px auto;
+    gap: 1.2rem;
+}
+
+.card-plan__item {
+    background-color: #fff;
+    padding: 2px 16px;
+    box-shadow: 0 4px 8px 0 rgba(106, 99, 99, 0.2);
+    transition: 0.3s;
+    width: 100%;
+    max-width: 375.5px;
+    height: auto;
+    min-height: 350px;
+    border-radius: 8px;
+    padding: 12px 8px;
+    margin: 0 auto;
+}
+
+.card-container {
+    padding: 1.2rem 1.1rem;
+}
+
+.card-container h4 {
+    font-size: 2.4rem;
+    margin-bottom: 22px;
+}
+
+.card-plan__item-preco {
+    margin-top: 25px;
+}
+
+.card-plan__item-preco {
+    font-size: 3.6rem;
+    font-weight: bold;
+}
+
+.card-plan__item-preco small {
+    display: block;
+    color: #333;
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 4px;
+}
+
+.card-plan__item-desc {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 12px;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.button1:hover {
+    transition: all 200ms;
+    background-color: #387b3a;
+    box-shadow: 3px 3px 8px -1px rgba(0, 0, 0, 0.655);
+}
+
+.button2:hover {
+    transition: all 200ms;
+    background-color: #03688a;
+    box-shadow: 3px 3px 8px -1px rgba(0, 0, 0, 0.655);
+}
+
+.button3:hover {
+    transition: all 200ms;
+    background-color: #b43b2e;
+    box-shadow: 3px 3px 8px -1px rgba(0, 0, 0, 0.655);
+}
+
+.button1 {
+    background-color: #4CAF50;
+}
+
+.button2 {
+    background-color: #008CBA;
+}
+
+.button3 {
+    background-color: #e74c3c;
+}
+
+/* Rodape */
+
+footer {
+    width: 100%;
+    background-image: linear-gradient(90deg, rgba(2, 0, 36, 1) 8%, rgb(2, 61, 112) 76%, rgb(2, 89, 107) 99%);
+    color: var(--fundo-branco);
+    padding: .8rem 12px;
+    margin-top: 32px;
+}
+
+footer .container {
+    margin: 1rem auto;
+}
+
+footer .container section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    padding: 4px 12px;
+}
+
+.copy {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.copy-sumary {
+    display: block;
+    font-size: .8rem;
+    text-align: center;
+}
+
+/* Media query */
+
+@media screen and (max-width: 890px) {
+    .conteudo-func {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .conteudo .conteudo__item .video iframe {
+        border-radius: 8px;
+        width: 95%;
+        height: 420px;
+    }
+
+    .quatroPontos div {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .conteudo .conteudo__item h1 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .principal .conteudo {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .conteudo .conteudo__item .subtitulo-2 {
+        margin-top: 25px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .item-container {
+        grid-template-columns: none;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .conteudo .conteudo__item h1 {
+        font-size: 1.8rem;
+        line-height: 2rem;
+    }
+}
+
+@media screen and (max-width: 355px) {
+    .conteudo-func {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    .conteudo-func div img {
+        height: 247px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .card-plan {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+
+    .card-plan__item {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 599px) {
+    .principal .conteudo {
+        grid-template-columns: 1fr;
+        height: 100vh;
+    }
+
+    .conteudo .conteudo__item .subtitulo-2 {
+        margin-top: 25px;
+    }
+
+    .fundo2 div .centralizar {
+        width: 280px;
+    }
+
+    .diferencial-conteudo article {
+        grid-template-columns: 1fr;
+    }
+
+    .conteudo-func div img {
+        height: 232px;
+    }
+}
+</style>
+    <link rel="shortcut icon" href="https://engenhariavinicius.com.br/images/flex/Exemplos/FLEXVIGAS.png" type="image/x-icon">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Quero Construir — Aprenda a construir com segurança e evite erros e prejuízos na sua obra!">
@@ -102,7 +814,7 @@
         <div class="borda"></div>
         <div class="conteudo-func">
             <div>
-                <img src="/images/flex/Exemplos/Capa3.png" />
+                <img src="https://engenhariavinicius.com.br/images/flex/Exemplos/Capa3.png" />
             </div>
             <div>
                 <p>
@@ -130,13 +842,13 @@
         <div class="borda"></div>
         <div class="diferencial-conteudo">
             <article>
-                <img src="/images/flex/Exemplos/RelatorioDeCalculo.jpg" alt="Relatório de Cálculo com Apenas um Clique" />
+                <img src="https://engenhariavinicius.com.br/images/flex/Exemplos/RelatorioDeCalculo.jpg" alt="Relatório de Cálculo com Apenas um Clique" />
                 <p>
                     <b>Relatório de Cálculo com Apenas um Clique:</b> Com a FlexVigas, a geração de relatórios é rápida e intuitiva, proporcionando uma experiência eficiente e produtiva para engenheiros, estudantes e projetistas.
                 </p>
             </article>
             <article>
-                <img src="/images/flex/Exemplos/RelatorioInterativo.jpg" alt="Relatório Interativo e Detalhado" />
+                <img src="https://engenhariavinicius.com.br/images/flex/Exemplos/RelatorioInterativo.jpg" alt="Relatório Interativo e Detalhado" />
                 <p>
                     <b>Relatório Interativo e Detalhado:</b> Oferece um relatório compilado ao final do processo, que não apenas apresenta os resultados de forma clara e concisa, mas também permite uma interação direta com os dados, facilitando a análise e a tomada de decisões estratégicas.
                 </p>
@@ -152,56 +864,56 @@
         <div class="borda"></div>
         <article class="card planilha">
             <div class="card-item item3">
-                <img src="/images/flex/Exemplos/CARD1.png" />
+                <img src="https://engenhariavinicius.com.br/images/flex/Exemplos/CARD1.png" />
                 <p>Interface Simplificada ao Máximo</p>
                 <small>
                     Acesse cálculos e ferramentas de forma rápida e descomplicada e desfrute de uma interface minimalista e intuitiva, simplificando suas tarefas com acesso direto às funcionalidades.
                 </small>
             </div>
             <div class="card-item item3">
-                <img src="/images/flex/Exemplos/CARD2.png" />
+                <img src="https://engenhariavinicius.com.br/images/flex/Exemplos/CARD2.png" />
                 <p>Interface Intuitiva</p>
                 <small>
                     Navegue facilmente pela interface amigável e explore funcionalidades de forma intuitiva, simplificando a sua experiência de uso ao máximo.
                 </small>
             </div>
             <div class="card-item item3">
-                <img src="/images/flex/Exemplos/CARD3.png" />
+                <img src="https://engenhariavinicius.com.br/images/flex/Exemplos/CARD3.png" />
                 <p>Ilustrações Didáticas</p>
                 <small>
                     Ilustrações claras para simplificar o entendimento. Visualize conceitos complexos de forma fácil e aprenda de maneira visual e intuitiva.
                 </small>
             </div>
             <div class="card-item item3">
-                <img src="/images/flex/Exemplos/CARD4.png" />
+                <img src="https://engenhariavinicius.com.br/images/flex/Exemplos/CARD4.png" />
                 <p>Avisos de Conformidade</p>
                 <small>
                     Receba alertas instantâneos sobre possíveis desconformidades com normas e mantenha-se informado sobre irregularidades de forma proativa, evitando erros com avisos automáticos.
                 </small>
             </div>
             <div class="card-item item3">
-                <img src="/images/flex/Exemplos/CARD5.png" />
+                <img src="https://engenhariavinicius.com.br/images/flex/Exemplos/CARD5.png" />
                 <p>Cálculo de Cisalhamento Simplificado</p>
                 <small>
                     Calcule o cisalhamento de forma intuitiva e eficiente através de análises simples e obtenha resultados precisos com apenas alguns cliques.
                 </small>
             </div>
             <div class="card-item item3">
-                <img src="/images/flex/Exemplos/CARD6.png" />
+                <img src="https://engenhariavinicius.com.br/images/flex/Exemplos/CARD6.png" />
                 <p>Cálculo Rápido para Vigas T</p>
                 <small>
                     Realize cálculos precisos para vigas T, otimizando seu tempo e projetos com cálculos instantâneos.
                 </small>
             </div>
             <div class="card-item item3">
-                <img src="/images/flex/Exemplos/CARD7.png" />
+                <img src="https://engenhariavinicius.com.br/images/flex/Exemplos/CARD7.png" />
                 <p>Cálculos Simplificados em Poucos Passos</p>
                 <small>
                     Insira algumas informações e obtenha cálculos precisos, reduzindo o tempo gasto em análises complexas com nossas ferramentas eficientes.
                 </small>
             </div>
             <div class="card-item item3">
-                <img src="/images/flex/Exemplos/CARD8.png" />
+                <img src="https://engenhariavinicius.com.br/images/flex/Exemplos/CARD8.png" />
                 <p>Cálculos Detalhados, Passo a Passo</p>
                 <small>
                     Realize cálculos minuciosos com orientação passo a passo, entendendo cada etapa do processo com detalhes elucidativos, obtendo resultados precisos e aprendendo ao longo do caminho.
@@ -217,27 +929,27 @@
         <div class="borda"></div>
         <div class="card">
             <div class="card-item item2">
-                <img src="/images/flex/Icones/graduate2.svg" />
+                <img src="https://engenhariavinicius.com.br/images/flex/Icones/graduate2.svg" />
                 <p>É estudante e busca entender conceitos complexos com ilustrações didáticas.</p>
             </div>
             <div class="card-item item2">
-                <img src="/images/flex/Icones/knowledge.svg" />
+                <img src="https://engenhariavinicius.com.br/images/flex/Icones/knowledge.svg" />
                 <p>Quer desenvolver seus conhecimentos de maneira prática.</p>
             </div>
             <div class="card-item item2">
-                <img src="/images/flex/Icones/calculator.svg" />
+                <img src="https://engenhariavinicius.com.br/images/flex/Icones/calculator.svg" />
                 <p>Precisa simplificar cálculos tediosos e economizar tempo precioso.</p>
             </div>
             <div class="card-item item2">
-                <img src="/images/flex/Icones/report.svg" />
+                <img src="https://engenhariavinicius.com.br/images/flex/Icones/report.svg" />
                 <p>Deseja obter um relatório de maneira descomplicada.</p>
             </div>
             <div class="card-item item2">
-                <img src="/images/flex/Icones/preview.svg" />
+                <img src="https://engenhariavinicius.com.br/images/flex/Icones/preview.svg" />
                 <p>Busca uma solução intuitiva para o cálculo de diferentes processos</p>
             </div>
             <div class="card-item item2">
-                <img src="/images/flex/Icones/trend.svg" />
+                <img src="https://engenhariavinicius.com.br/images/flex/Icones/trend.svg" />
                 <p>Valoriza uma solução versátil que possa ser utilizada em diversos contextos e projetos.</p>
             </div>
         </div>
@@ -258,25 +970,25 @@
                     <div class="card-container">
                         <h4><b>Plano Básico</b></h4>
                         <p class="card-plan__item-desc">
-                            <img src="/images/flex/Icones/checked.svg" width="20" height="20" /> Acesso a todo o conteúdo da planilha
+                            <img src="https://engenhariavinicius.com.br/images/flex/Icones/checked.svg" width="20" height="20" /> Acesso a todo o conteúdo da planilha
                         </p>
                         <p class="card-plan__item-desc">
-                            <img src="/images/flex/Icones/checked.svg" width="20" height="20" /> Tutorial completo
+                            <img src="https://engenhariavinicius.com.br/images/flex/Icones/checked.svg" width="20" height="20" /> Tutorial completo
                         </p>
                         <p class="card-plan__item-desc">
-                            <img src="/images/flex/Icones/checked.svg" width="20" height="20" /> Planilha bônus para cálculo de laje
+                            <img src="https://engenhariavinicius.com.br/images/flex/Icones/checked.svg" width="20" height="20" /> Planilha bônus para cálculo de laje
                         </p>
                         <p class="card-plan__item-desc">
-                            <img src="/images/flex/Icones/checked.svg" width="20" height="20" /> Planilha bônus para cálculo de fundações
+                            <img src="https://engenhariavinicius.com.br/images/flex/Icones/checked.svg" width="20" height="20" /> Planilha bônus para cálculo de fundações
                         </p>
                         <p class="card-plan__item-desc">
-                            <img src="/images/flex/Icones/checked.svg" width="20" height="20" /> Planilha bônus para cálculo de escadas
+                            <img src="https://engenhariavinicius.com.br/images/flex/Icones/checked.svg" width="20" height="20" /> Planilha bônus para cálculo de escadas
                         </p>
                         <p class="card-plan__item-desc">
-                            <img src="/images/flex/Icones/x.svg" width="20" height="20" /> Combo com 90 planilhas para Engenheiros
+                            <img src="https://engenhariavinicius.com.br/images/flex/Icones/x.svg" width="20" height="20" /> Combo com 90 planilhas para Engenheiros
                         </p>
                         <p class="card-plan__item-desc">
-                            <img src="/images/flex/Icones/x.svg" width="20" height="20" /> Ebook completo sobre concreto armado
+                            <img src="https://engenhariavinicius.com.br/images/flex/Icones/x.svg" width="20" height="20" /> Ebook completo sobre concreto armado
                         </p>
                         <p class="card-plan__item-preco">
                             R$ 29,90
@@ -289,25 +1001,25 @@
                     <div class="card-container">
                         <h4><b>Plano Premium</b></h4>
                         <p class="card-plan__item-desc">
-                            <img src="/images/flex/Icones/checked.svg" width="20" height="20" /> Acesso a todo o conteúdo da planilha
+                            <img src="https://engenhariavinicius.com.br/images/flex/Icones/checked.svg" width="20" height="20" /> Acesso a todo o conteúdo da planilha
                         </p>
                         <p class="card-plan__item-desc">
-                            <img src="/images/flex/Icones/checked.svg" width="20" height="20" /> Tutorial completo
+                            <img src="https://engenhariavinicius.com.br/images/flex/Icones/checked.svg" width="20" height="20" /> Tutorial completo
                         </p>
                         <p class="card-plan__item-desc">
-                            <img src="/images/flex/Icones/checked.svg" width="20" height="20" /> Planilha bônus para cálculo de laje
+                            <img src="https://engenhariavinicius.com.br/images/flex/Icones/checked.svg" width="20" height="20" /> Planilha bônus para cálculo de laje
                         </p>
                         <p class="card-plan__item-desc">
-                            <img src="/images/flex/Icones/checked.svg" width="20" height="20" /> Planilha bônus para cálculo de fundações
+                            <img src="https://engenhariavinicius.com.br/images/flex/Icones/checked.svg" width="20" height="20" /> Planilha bônus para cálculo de fundações
                         </p>
                         <p class="card-plan__item-desc">
-                            <img src="/images/flex/Icones/checked.svg" width="20" height="20" /> Planilha bônus para cálculo de escadas
+                            <img src="https://engenhariavinicius.com.br/images/flex/Icones/checked.svg" width="20" height="20" /> Planilha bônus para cálculo de escadas
                         </p>
                         <p class="card-plan__item-desc">
-                            <img src="/images/flex/Icones/checked.svg" width="20" height="20" /> Combo com 90 planilhas para Engenheiros
+                            <img src="https://engenhariavinicius.com.br/images/flex/Icones/checked.svg" width="20" height="20" /> Combo com 90 planilhas para Engenheiros
                         </p>
                         <p class="card-plan__item-desc">
-                            <img src="/images/flex/Icones/x.svg" width="20" height="20" /> Ebook completo sobre concreto armado
+                            <img src="https://engenhariavinicius.com.br/images/flex/Icones/x.svg" width="20" height="20" /> Ebook completo sobre concreto armado
                         </p>
                         <p class="card-plan__item-preco">
                             <small>Por apenas 4x de</small>
@@ -322,25 +1034,25 @@
                     <div class="card-container">
                         <h4><b>Plano Plus</b></h4>
                         <p class="card-plan__item-desc">
-                            <img src="/images/flex/Icones/checked.svg" width="20" height="20" /> Acesso a todo o conteúdo da planilha
+                            <img src="https://engenhariavinicius.com.br/images/flex/Icones/checked.svg" width="20" height="20" /> Acesso a todo o conteúdo da planilha
                         </p>
                         <p class="card-plan__item-desc">
-                            <img src="/images/flex/Icones/checked.svg" width="20" height="20" /> Tutorial completo
+                            <img src="https://engenhariavinicius.com.br/images/flex/Icones/checked.svg" width="20" height="20" /> Tutorial completo
                         </p>
                         <p class="card-plan__item-desc">
-                            <img src="/images/flex/Icones/checked.svg" width="20" height="20" /> Planilha bônus para cálculo de laje
+                            <img src="https://engenhariavinicius.com.br/images/flex/Icones/checked.svg" width="20" height="20" /> Planilha bônus para cálculo de laje
                         </p>
                         <p class="card-plan__item-desc">
-                            <img src="/images/flex/Icones/checked.svg" width="20" height="20" /> Planilha bônus para cálculo de fundações
+                            <img src="https://engenhariavinicius.com.br/images/flex/Icones/checked.svg" width="20" height="20" /> Planilha bônus para cálculo de fundações
                         </p>
                         <p class="card-plan__item-desc">
-                            <img src="/images/flex/Icones/checked.svg" width="20" height="20" /> Planilha bônus para cálculo de escadas
+                            <img src="https://engenhariavinicius.com.br/images/flex/Icones/checked.svg" width="20" height="20" /> Planilha bônus para cálculo de escadas
                         </p>
                         <p class="card-plan__item-desc">
-                            <img src="/images/flex/Icones/checked.svg" width="20" height="20" /> Combo com 90 planilhas para Engenheiros
+                            <img src="https://engenhariavinicius.com.br/images/flex/Icones/checked.svg" width="20" height="20" /> Combo com 90 planilhas para Engenheiros
                         </p>
                         <p class="card-plan__item-desc">
-                            <img src="/images/flex/Icones/checked.svg" width="20" height="20" /> Ebook completo sobre concreto armado
+                            <img src="https://engenhariavinicius.com.br/images/flex/Icones/checked.svg" width="20" height="20" /> Ebook completo sobre concreto armado
                         </p>
                         <p class="card-plan__item-preco">
                             <small>Por apenas 4x de</small>
@@ -360,21 +1072,21 @@
         <div class="borda"></div>
         <div class="card">
             <div class="card-item">
-                <img src="/images/flex/Icones/certificado2.svg" />
+                <img src="https://engenhariavinicius.com.br/images/flex/Icones/certificado2.svg" />
                 <p>Teste por 7 dias</p>
                 <small>
                     Em caso de insatisfação, a Hotmart garante seu dinheiro de volta em até 7 dias após a compra.
                 </small>
             </div>
             <div class="card-item">
-                <img src="/images/flex/Icones/email.svg" />
+                <img src="https://engenhariavinicius.com.br/images/flex/Icones/email.svg" />
                 <p>Receba por e-mail</p>
                 <small>
                     Ao realizar a compra você receberá o seu produto por email com todas as instruções
                 </small>
             </div>
             <div class="card-item">
-                <img src="/images/flex/Icones/seguranca.svg" />
+                <img src="https://engenhariavinicius.com.br/images/flex/Icones/seguranca.svg" />
                 <p>Site protegido</p>
                 <small>
                     A plataforma Hotmart é a maior comunidade de conteúdos digitais em atividade no Brasil.
@@ -485,7 +1197,7 @@
         </section>
     </footer>
 
-    <script type="module" src="/js/flex.js?v=yoa7fYkUlTmYHJiN-HMdMgwy4rYjWzaaJP2W2cMBB6w"></script>
+    <script type="module" src="https://engenhariavinicius.com.br/js/flex.js?v=yoa7fYkUlTmYHJiN-HMdMgwy4rYjWzaaJP2W2cMBB6w"></script>
 
     <script>
         !function(f,b,e,v,n,t,s)
