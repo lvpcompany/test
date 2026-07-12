@@ -1186,18 +1186,50 @@ footer .container section {
     <footer>
         <section class="container">
             <div class="copy">
-                &copy; Todos os direitos reservados <strong>Engenharia.Vinicius</strong> - <span id="ltlAno"></span>
+                &copy; Todos os direitos reservados <strong>
             </div>
             <small class="copy-sumary">
                 Este site não está vinculado ao Facebook ou ao Facebook Inc. de forma alguma.
                 O FACEBOOK é uma marca registrada da FACEBOOK Inc. <br />A privacidade é nossa prioridade: seus dados
                 pessoais
-                NÃO são compartilhados com terceiros. Nosso endereço de e-mail de suporte é <a href="mailto:flexvigas@gmail.com" title="E-mail de suporte">flexvigas@gmail.com</a>
+                NÃO são compartilhados com terceiros.
             </small>
         </section>
     </footer>
 
-    <script type="module" src="https://engenhariavinicius.com.br/js/flex.js?v=yoa7fYkUlTmYHJiN-HMdMgwy4rYjWzaaJP2W2cMBB6w"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const questions = document.querySelectorAll('.faq-question');
+
+            questions.forEach(function (question) {
+                const answer = question.nextElementSibling;
+
+                if (question.classList.contains('open')) {
+                    answer.style.display = 'block';
+                } else {
+                    answer.style.display = 'none';
+                }
+
+                question.addEventListener('click', function () {
+                    const isOpen = question.classList.contains('open');
+
+                    questions.forEach(function (otherQuestion) {
+                        otherQuestion.classList.remove('open');
+                        const otherAnswer = otherQuestion.nextElementSibling;
+                        if (otherAnswer) otherAnswer.style.display = 'none';
+                    });
+
+                    if (!isOpen) {
+                        question.classList.add('open');
+                        answer.style.display = 'block';
+                    }
+                });
+            });
+
+            const year = document.getElementById('ltlAno');
+            if (year) year.textContent = new Date().getFullYear();
+        });
+    </script>
 
     <script>
         !function(f,b,e,v,n,t,s)
