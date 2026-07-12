@@ -1,0 +1,509 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Aprenda a como análisa, calcular vigas de uma forma fácil e rápido, sem dores de cabeça e cálculos, Interface Simples, Relatórios Instantâneos, Cálculos à Flexão (Vigas Retangulares e T), Cálculos à Cisalhamento (Vigas Retangulares e T).">
+    <meta name="keywords" content="Análise de vigas, Interface Simples, Relatórios Instantâneos, Cálculos à Flexão (Vigas Retangulares e T), Cálculos à Cisalhamento (Vigas Retangulares e T), vigas, Princípios na análise de vigas, Forças internas e sua análise, Análise estrutural, Vigas na engenharia civil, Construções, Consultorias, Construtoras, Pedreiros, Engenharia, Civil, Engenharia Civil, Curso de engenharia">
+
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+
+    <!-- Meta tags do Open Graph para o Facebook -->
+    <meta property="og:title" content="Flex Vigas - Planilha para dimensionamento de Vigas à Flexão e Cisalhamento Intuitiva">
+    <meta property="og:description"
+          content="Aprenda a como análisa, calcular vigas de uma forma fácil e rápido, sem dores de cabeça e cálculos, Interface Simples, Relatórios Instantâneos, Cálculos à Flexão (Vigas Retangulares e T), Cálculos à Cisalhamento (Vigas Retangulares e T).">
+    <meta property="og:image"
+          content="https://engenhariavinicius.com.br/images/flex/Exemplos/FLEXVIGAS.png">
+    <meta property="og:url" content="https://engenhariavinicius.com.br/images/flex/Exemplos/FLEXVIGAS.png">
+    <meta property="og:type" content="website">
+
+    <!-- Meta tags do Twitter -->
+    <meta name="twitter:title" content="FlexVigas - Planilha para dimensionamento de Vigas à Flexão e Cisalhamento Intuitiva">
+    <meta name="twitter:image" content="https://engenhariavinicius.com.br/images/flex/Exemplos/FLEXVIGAS.png">
+    <meta name="twitter:card" content="https://engenhariavinicius.com.br/images/flex/Exemplos/FLEXVIGAS.png">
+    <meta property="twitter:description" content="Aprenda a como análisa, calcular vigas de uma forma fácil e rápido, sem dores de cabeça e cálculos, Interface Simples, Relatórios Instantâneos, Cálculos à Flexão (Vigas Retangulares e T), Cálculos à Cisalhamento (Vigas Retangulares e T).">
+
+    <link rel="stylesheet" href="/css/flexvigas.css?v=d1FqBxj-ovX27Iy8OJTaTIzO22fxFfz4KCMxEAbpw9Q" />
+    <link rel="shortcut icon" href="/images/flex/Exemplos/FLEXVIGAS.png" type="image/x-icon">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Quero Construir — Aprenda a construir com segurança e evite erros e prejuízos na sua obra!">
+    <meta name="twitter:description" content="Curso 100% online que ensina o passo a passo da construção civil de forma simples e prática. Ideal para quem vai construir e quer evitar prejuízos, desperdícios e dor de cabeça.">
+    <meta name="twitter:image" content="https://engenhariavinicius.com.br/images/flex/Exemplos/FLEXVIGAS.png">
+
+    <title>Flex Vigas - Planilha para dimensionamento de Vigas à Flexão e Cisalhamento Intuitiva</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+        {
+            "context": "https://schema.org",
+            "type": "Website",
+            "name": "Flex Vigas",
+            "description": "Aprenda a como análisa, calcular vigas de uma forma fácil e rápido, sem dores de cabeça e cálculos, Interface Simples, Relatórios Instantâneos, Cálculos à Flexão (Vigas Retangulares e T), Cálculos à Cisalhamento (Vigas Retangulares e T).",
+            "provider": {
+                "type": "spreadsheet",
+                "name": "Flex Vigas",
+                "url": "https://engenhariavinicius.com.br/flexvigas"
+            },
+            "image": "https://engenhariavinicius.com.br/images/flex/Exemplos/FLEXVIGAS.png",
+        }
+    </script>
+
+        <script>
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-58JH874X');
+        </script>
+</head>
+<body>
+    
+<main>
+    <section class="principal fundo" id="topo">
+        <div class="overlay"></div>
+        <div class="conteudo container">
+            <aside class="conteudo__item">
+                <h1>
+                    SEM CÁLCULOS A MÃO OU DORES DE CABEÇA:
+                    <br />
+                    Calcule de maneira muito mais Intuitiva
+                </h1>
+                <div class="video">
+                    <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/HeU9MAQHGJ4?si=lFS88z16yCVBuovf"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                </div>
+                <a href="#garantir" class="btn btn-saibamais">Quero saber mais</a>
+            </aside>
+        </div>
+    </section>
+</main>
+
+<section class="quatroPontos">
+    <div>
+        <p>&bull; Interface Simples</p>
+        <p>&bull; Relatórios Instantâneos</p>
+        <p>&bull; Cálculos à Flexão (Vigas Retangulares e T)</p>
+        <p>&bull; Cálculos à Cisalhamento (Vigas Retangulares e T)</p>
+    </div>
+</section>
+
+<section class="principal-2">
+    <div class="container">
+        <h1>FLEXVIGAS! ENGENHARIA DESCOMPLICADA</h1>
+        <div class="borda"></div>
+        <div class="conteudo-func">
+            <div>
+                <img src="/images/flex/Exemplos/Capa3.png" />
+            </div>
+            <div>
+                <p>
+                    Imagine ter a capacidade de <b>realizar cálculos complexos de flexão e cisalhamento com apenas alguns cliques</b>.
+                    Com a FlexVigas, isso é possível! Nossa planilha inteligente simplifica todo o processo,
+                    permitindo que você gere resultados precisos de maneira rápida e prática.
+                </p>
+                <p>
+                    Mas não é só isso! A FlexVigas vai além, oferecendo <b>um relatório compilado ao final do processo</b>
+                    que é tão intuitivo quanto eficaz. Com informações detalhadas,
+                    você terá tudo o que precisa para tomar decisões informadas e alcançar resultados excepcionais.
+                </p>
+                <p>
+                    Não deixe que os desafios da engenharia atrapalhem seu progresso. Experimente a FlexVigas
+                    hoje mesmo e descubra como é fácil alcançar a excelência em cada projeto. Sua jornada rumo à eficiência começa aqui.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="principal-2 diferencial">
+    <div class="container">
+        <h1>QUAL O DIFERENCIAL ?</h1>
+        <div class="borda"></div>
+        <div class="diferencial-conteudo">
+            <article>
+                <img src="/images/flex/Exemplos/RelatorioDeCalculo.jpg" alt="Relatório de Cálculo com Apenas um Clique" />
+                <p>
+                    <b>Relatório de Cálculo com Apenas um Clique:</b> Com a FlexVigas, a geração de relatórios é rápida e intuitiva, proporcionando uma experiência eficiente e produtiva para engenheiros, estudantes e projetistas.
+                </p>
+            </article>
+            <article>
+                <img src="/images/flex/Exemplos/RelatorioInterativo.jpg" alt="Relatório Interativo e Detalhado" />
+                <p>
+                    <b>Relatório Interativo e Detalhado:</b> Oferece um relatório compilado ao final do processo, que não apenas apresenta os resultados de forma clara e concisa, mas também permite uma interação direta com os dados, facilitando a análise e a tomada de decisões estratégicas.
+                </p>
+            </article>
+        </div>
+        <a href="#garantir" class="btn btn-saibamais">Quero saber mais</a>
+    </div>
+</section>
+
+<section class="principal-2">
+    <div class="container">
+        <h1>CONHEÇA TODAS AS FUNCIONALIDADES DA PLANILHA</h1>
+        <div class="borda"></div>
+        <article class="card planilha">
+            <div class="card-item item3">
+                <img src="/images/flex/Exemplos/CARD1.png" />
+                <p>Interface Simplificada ao Máximo</p>
+                <small>
+                    Acesse cálculos e ferramentas de forma rápida e descomplicada e desfrute de uma interface minimalista e intuitiva, simplificando suas tarefas com acesso direto às funcionalidades.
+                </small>
+            </div>
+            <div class="card-item item3">
+                <img src="/images/flex/Exemplos/CARD2.png" />
+                <p>Interface Intuitiva</p>
+                <small>
+                    Navegue facilmente pela interface amigável e explore funcionalidades de forma intuitiva, simplificando a sua experiência de uso ao máximo.
+                </small>
+            </div>
+            <div class="card-item item3">
+                <img src="/images/flex/Exemplos/CARD3.png" />
+                <p>Ilustrações Didáticas</p>
+                <small>
+                    Ilustrações claras para simplificar o entendimento. Visualize conceitos complexos de forma fácil e aprenda de maneira visual e intuitiva.
+                </small>
+            </div>
+            <div class="card-item item3">
+                <img src="/images/flex/Exemplos/CARD4.png" />
+                <p>Avisos de Conformidade</p>
+                <small>
+                    Receba alertas instantâneos sobre possíveis desconformidades com normas e mantenha-se informado sobre irregularidades de forma proativa, evitando erros com avisos automáticos.
+                </small>
+            </div>
+            <div class="card-item item3">
+                <img src="/images/flex/Exemplos/CARD5.png" />
+                <p>Cálculo de Cisalhamento Simplificado</p>
+                <small>
+                    Calcule o cisalhamento de forma intuitiva e eficiente através de análises simples e obtenha resultados precisos com apenas alguns cliques.
+                </small>
+            </div>
+            <div class="card-item item3">
+                <img src="/images/flex/Exemplos/CARD6.png" />
+                <p>Cálculo Rápido para Vigas T</p>
+                <small>
+                    Realize cálculos precisos para vigas T, otimizando seu tempo e projetos com cálculos instantâneos.
+                </small>
+            </div>
+            <div class="card-item item3">
+                <img src="/images/flex/Exemplos/CARD7.png" />
+                <p>Cálculos Simplificados em Poucos Passos</p>
+                <small>
+                    Insira algumas informações e obtenha cálculos precisos, reduzindo o tempo gasto em análises complexas com nossas ferramentas eficientes.
+                </small>
+            </div>
+            <div class="card-item item3">
+                <img src="/images/flex/Exemplos/CARD8.png" />
+                <p>Cálculos Detalhados, Passo a Passo</p>
+                <small>
+                    Realize cálculos minuciosos com orientação passo a passo, entendendo cada etapa do processo com detalhes elucidativos, obtendo resultados precisos e aprendendo ao longo do caminho.
+                </small>
+            </div>
+        </article>
+    </div>
+</section>
+
+<section class="principal-2 fundo2">
+    <div class="container">
+        <h1>A PLANILHA É PARA VOCÊ QUE</h1>
+        <div class="borda"></div>
+        <div class="card">
+            <div class="card-item item2">
+                <img src="/images/flex/Icones/graduate2.svg" />
+                <p>É estudante e busca entender conceitos complexos com ilustrações didáticas.</p>
+            </div>
+            <div class="card-item item2">
+                <img src="/images/flex/Icones/knowledge.svg" />
+                <p>Quer desenvolver seus conhecimentos de maneira prática.</p>
+            </div>
+            <div class="card-item item2">
+                <img src="/images/flex/Icones/calculator.svg" />
+                <p>Precisa simplificar cálculos tediosos e economizar tempo precioso.</p>
+            </div>
+            <div class="card-item item2">
+                <img src="/images/flex/Icones/report.svg" />
+                <p>Deseja obter um relatório de maneira descomplicada.</p>
+            </div>
+            <div class="card-item item2">
+                <img src="/images/flex/Icones/preview.svg" />
+                <p>Busca uma solução intuitiva para o cálculo de diferentes processos</p>
+            </div>
+            <div class="card-item item2">
+                <img src="/images/flex/Icones/trend.svg" />
+                <p>Valoriza uma solução versátil que possa ser utilizada em diversos contextos e projetos.</p>
+            </div>
+        </div>
+        <a href="#garantir" class="btn btn-saibamais centralizar">Garantir agora</a>
+    </div>
+</section>
+
+    <section id="garantir" class="principal-2 fundoDegrade" style="margin-top: 0px;">
+        <div class="container">
+            <h1>NÃO PERCA MAIS TEMPO!</h1>
+            <small class="subtitulo2">
+                A oportunidade que você esperava chegou. É a sua chance de escolher os melhores planos, feitos
+                especialmente
+                para você. Aproveite agora, pois essa oportunidade é limitada!
+            </small>
+            <div class="card-plan">
+                <div class="card-plan__item">
+                    <div class="card-container">
+                        <h4><b>Plano Básico</b></h4>
+                        <p class="card-plan__item-desc">
+                            <img src="/images/flex/Icones/checked.svg" width="20" height="20" /> Acesso a todo o conteúdo da planilha
+                        </p>
+                        <p class="card-plan__item-desc">
+                            <img src="/images/flex/Icones/checked.svg" width="20" height="20" /> Tutorial completo
+                        </p>
+                        <p class="card-plan__item-desc">
+                            <img src="/images/flex/Icones/checked.svg" width="20" height="20" /> Planilha bônus para cálculo de laje
+                        </p>
+                        <p class="card-plan__item-desc">
+                            <img src="/images/flex/Icones/checked.svg" width="20" height="20" /> Planilha bônus para cálculo de fundações
+                        </p>
+                        <p class="card-plan__item-desc">
+                            <img src="/images/flex/Icones/checked.svg" width="20" height="20" /> Planilha bônus para cálculo de escadas
+                        </p>
+                        <p class="card-plan__item-desc">
+                            <img src="/images/flex/Icones/x.svg" width="20" height="20" /> Combo com 90 planilhas para Engenheiros
+                        </p>
+                        <p class="card-plan__item-desc">
+                            <img src="/images/flex/Icones/x.svg" width="20" height="20" /> Ebook completo sobre concreto armado
+                        </p>
+                        <p class="card-plan__item-preco">
+                            R$ 29,90
+                        </p><br />
+                        <a href="https://pay.hotmart.com/P74407929Q?checkoutMode=10" target="_blank" class="button button1">Comprar agora</a>
+                    </div>
+                </div>
+
+                <div class="card-plan__item">
+                    <div class="card-container">
+                        <h4><b>Plano Premium</b></h4>
+                        <p class="card-plan__item-desc">
+                            <img src="/images/flex/Icones/checked.svg" width="20" height="20" /> Acesso a todo o conteúdo da planilha
+                        </p>
+                        <p class="card-plan__item-desc">
+                            <img src="/images/flex/Icones/checked.svg" width="20" height="20" /> Tutorial completo
+                        </p>
+                        <p class="card-plan__item-desc">
+                            <img src="/images/flex/Icones/checked.svg" width="20" height="20" /> Planilha bônus para cálculo de laje
+                        </p>
+                        <p class="card-plan__item-desc">
+                            <img src="/images/flex/Icones/checked.svg" width="20" height="20" /> Planilha bônus para cálculo de fundações
+                        </p>
+                        <p class="card-plan__item-desc">
+                            <img src="/images/flex/Icones/checked.svg" width="20" height="20" /> Planilha bônus para cálculo de escadas
+                        </p>
+                        <p class="card-plan__item-desc">
+                            <img src="/images/flex/Icones/checked.svg" width="20" height="20" /> Combo com 90 planilhas para Engenheiros
+                        </p>
+                        <p class="card-plan__item-desc">
+                            <img src="/images/flex/Icones/x.svg" width="20" height="20" /> Ebook completo sobre concreto armado
+                        </p>
+                        <p class="card-plan__item-preco">
+                            <small>Por apenas 4x de</small>
+                            R$ 11,78
+                        </p>
+                        <small>ou R$ 43,90 à vista</small><br /><br />
+                        <a href="https://pay.hotmart.com/R90931061J?checkoutMode=10" target="_blank" class="button button3">Comprar agora</a>
+                    </div>
+                </div>
+
+                <div class="card-plan__item">
+                    <div class="card-container">
+                        <h4><b>Plano Plus</b></h4>
+                        <p class="card-plan__item-desc">
+                            <img src="/images/flex/Icones/checked.svg" width="20" height="20" /> Acesso a todo o conteúdo da planilha
+                        </p>
+                        <p class="card-plan__item-desc">
+                            <img src="/images/flex/Icones/checked.svg" width="20" height="20" /> Tutorial completo
+                        </p>
+                        <p class="card-plan__item-desc">
+                            <img src="/images/flex/Icones/checked.svg" width="20" height="20" /> Planilha bônus para cálculo de laje
+                        </p>
+                        <p class="card-plan__item-desc">
+                            <img src="/images/flex/Icones/checked.svg" width="20" height="20" /> Planilha bônus para cálculo de fundações
+                        </p>
+                        <p class="card-plan__item-desc">
+                            <img src="/images/flex/Icones/checked.svg" width="20" height="20" /> Planilha bônus para cálculo de escadas
+                        </p>
+                        <p class="card-plan__item-desc">
+                            <img src="/images/flex/Icones/checked.svg" width="20" height="20" /> Combo com 90 planilhas para Engenheiros
+                        </p>
+                        <p class="card-plan__item-desc">
+                            <img src="/images/flex/Icones/checked.svg" width="20" height="20" /> Ebook completo sobre concreto armado
+                        </p>
+                        <p class="card-plan__item-preco">
+                            <small>Por apenas 4x de</small>
+                            R$ 12,61
+                        </p>
+                        <small>ou R$ 47,00 à vista</small><br /><br />
+                        <a href="https://pay.hotmart.com/P90947022I?checkoutMode=10" target="_blank" class="button button2">Comprar agora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="principal-2 fundo2">
+    <div class="container">
+        <h1>SEU RISCO AO ADQUIRIR É ZERO</h1>
+        <div class="borda"></div>
+        <div class="card">
+            <div class="card-item">
+                <img src="/images/flex/Icones/certificado2.svg" />
+                <p>Teste por 7 dias</p>
+                <small>
+                    Em caso de insatisfação, a Hotmart garante seu dinheiro de volta em até 7 dias após a compra.
+                </small>
+            </div>
+            <div class="card-item">
+                <img src="/images/flex/Icones/email.svg" />
+                <p>Receba por e-mail</p>
+                <small>
+                    Ao realizar a compra você receberá o seu produto por email com todas as instruções
+                </small>
+            </div>
+            <div class="card-item">
+                <img src="/images/flex/Icones/seguranca.svg" />
+                <p>Site protegido</p>
+                <small>
+                    A plataforma Hotmart é a maior comunidade de conteúdos digitais em atividade no Brasil.
+                </small>
+            </div>
+        </div>
+
+        <a href="#garantir" class="btn btn-saibamais centralizar">garantir agora</a>
+    </div>
+</section>
+
+<section class="principal-2">
+    <div class="container">
+        <h1>AINDA COM DÚVIDAS?</h1>
+        <div class="borda"></div>
+        <div class="form">
+            <div class="faq-item">
+                <div class="faq-question open">
+                    <h2>QUAIS OS CÁLCULOS QUE A PLANILHA REALIZA?</h2>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        A planilha FlexVigas realiza cálculos essenciais para vigas retangulares e vigas T,
+                        abrangendo tanto flexão quanto cisalhamento. Garante precisão em cada etapa do processo,
+                        seja para determinar a capacidade de uma viga, ou até mesmo resolver exercícios simples de dimensionamento.
+                    </p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h2>COMO SÃO ENTREGUES OS RESULTADOS DA PLANILHA?</h2>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        <b>DE MANEIRA CLARA E ACESSÍVEL!</b> Após a conclusão dos cálculos, os resultados são apresentados de forma organizada
+                        e detalhada em um relatório compilado em PDF.
+                        Este relatório oferece uma visão abrangente das análises de flexão e cisalhamento realizadas, com informações detalhadas.
+                    </p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h2>ESTOU NO INÍCIO DA FACULDADE, CONSIGO UTILIZAR A PLANILHA?</h2>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        <b>CLARO!</b> Mesmo no início da jornada acadêmica, você pode aproveitar todos os benefícios. Com uma interface intuitiva e amigável,
+                        projetada para atender a uma variedade de níveis de experiência, a FlexVigas é perfeita para estudantes iniciantes que desejam aprimorar
+                        suas habilidades em engenharia estrutural. Com orientações claras e instruções passo a passo, a planilha simplifica o processo de cálculo,
+                        permitindo que você obtenha resultados precisos e confiáveis desde o início. Além disso, nossa equipe de suporte está sempre disponível
+                        para ajudar e esclarecer dúvidas, garantindo uma experiência de aprendizado tranquila e enriquecedora.
+                    </p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h2>SOU UM ENGENHEIRO FORMADO OU ARQUITETO, TENHO VANTAGENS NA COMPRA DA PLANILHA?</h2>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        <b>MUITAS!</b> Como engenheiro formado ou arquiteto, você reconhece a importância de ferramentas que simplificam e aprimoram o processo de
+                        projeto e cálculo estrutural. Ao adquirir a FlexVigas, você se beneficia de uma solução poderosa e eficiente que eleva o nível de seus
+                        projetos. Com a capacidade de realizar cálculos de maneira rápida e precisa, a planilha permite que você economize tempo valioso em cada
+                        projeto, liberando recursos para se concentrar em aspectos mais criativos e estratégicos. Além disso, o relatório compilado ao final do
+                        processo oferece uma visão abrangente e detalhada dos resultados, facilitando a comunicação com clientes e colegas de trabalho.
+                    </p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h2>POSSUIREI ACESSO VITALÍCIO?</h2>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        <b>SIM!</b> Você poderá desfrutar de todas as melhorias, novos recursos e atualizações de normas e padrões da engenharia sem custos
+                        adicionais. Nosso compromisso com sua satisfação e sucesso é duradouro, e estamos aqui para apoiá-lo em cada etapa de sua jornada
+                        profissional.
+                    </p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h2>CASO TENHA DÚVIDAS, COMO FAÇO PARA SOLUCIONÁ-LAS?</h2>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Estamos disponíveis para responder suas perguntas, oferecer orientações e resolver quaisquer problemas que possam surgir durante o uso da
+                        planilha e para garantir que você tenha uma experiência tranquila e produtiva. Entre em contato através da plataforma de compra ou através
+                        de nosso email: <a href="mailto:flexvigas@gmail.com" title="E-mail de suporte" style="color: #020024;">flexvigas@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer>
+        <section class="container">
+            <div class="copy">
+                &copy; Todos os direitos reservados <strong>Engenharia.Vinicius</strong> - <span id="ltlAno"></span>
+            </div>
+            <small class="copy-sumary">
+                Este site não está vinculado ao Facebook ou ao Facebook Inc. de forma alguma.
+                O FACEBOOK é uma marca registrada da FACEBOOK Inc. <br />A privacidade é nossa prioridade: seus dados
+                pessoais
+                NÃO são compartilhados com terceiros. Nosso endereço de e-mail de suporte é <a href="mailto:flexvigas@gmail.com" title="E-mail de suporte">flexvigas@gmail.com</a>
+            </small>
+        </section>
+    </footer>
+
+    <script type="module" src="/js/flex.js?v=yoa7fYkUlTmYHJiN-HMdMgwy4rYjWzaaJP2W2cMBB6w"></script>
+
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1399495393989987');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+             src="https://www.facebook.com/tr?id=1399495393989987&ev=PageView&noscript=1" />
+    </noscript>
+</body>
+</html>
