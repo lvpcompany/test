@@ -777,6 +777,28 @@ footer .container section {
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','GTM-58JH874X');
         </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '965398419838867');
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent', {
+        content_name: 'Flex Vigas',
+        content_type: 'product'
+    });
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=965398419838867&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
 <body>
     
@@ -997,7 +1019,12 @@ footer .container section {
                         <p class="card-plan__item-preco">
                             R$ 29,90
                         </p><br />
-                        <a href="https://pay.hotmart.com/P74407929Q?checkoutMode=10" target="_blank" class="button button1">Comprar agora</a>
+                        <a href="https://pay.cakto.com.br/egvm7gi"
+                           target="_blank"
+                           class="button button1"
+                           onclick="if (typeof fbq === 'function') fbq('track', 'InitiateCheckout', {content_name: 'Flex Vigas - Plano Básico', content_ids: ['flex-vigas-basico'], content_type: 'product', value: 29.90, currency: 'BRL', num_items: 1});">
+                            Comprar agora
+                        </a>
                     </div>
                 </div>
 
@@ -1030,7 +1057,12 @@ footer .container section {
                             R$ 11,78
                         </p>
                         <small>ou R$ 43,90 à vista</small><br /><br />
-                        <a href="https://pay.hotmart.com/R90931061J?checkoutMode=10" target="_blank" class="button button3">Comprar agora</a>
+                        <a href="https://pay.cakto.com.br/quofirn"
+                           target="_blank"
+                           class="button button3"
+                           onclick="if (typeof fbq === 'function') fbq('track', 'InitiateCheckout', {content_name: 'Flex Vigas - Plano Premium', content_ids: ['flex-vigas-premium'], content_type: 'product', value: 43.90, currency: 'BRL', num_items: 1});">
+                            Comprar agora
+                        </a>
                     </div>
                 </div>
 
@@ -1063,7 +1095,12 @@ footer .container section {
                             R$ 12,61
                         </p>
                         <small>ou R$ 47,00 à vista</small><br /><br />
-                        <a href="https://pay.hotmart.com/P90947022I?checkoutMode=10" target="_blank" class="button button2">Comprar agora</a>
+                        <a href="https://pay.cakto.com.br/j5okbod_976659"
+                           target="_blank"
+                           class="button button2"
+                           onclick="if (typeof fbq === 'function') fbq('track', 'InitiateCheckout', {content_name: 'Flex Vigas - Plano Plus', content_ids: ['flex-vigas-plus'], content_type: 'product', value: 47.00, currency: 'BRL', num_items: 1});">
+                            Comprar agora
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1234,21 +1271,5 @@ footer .container section {
         });
     </script>
 
-    <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1399495393989987');
-        fbq('track', 'PageView');
-    </script>
-    <noscript>
-        <img height="1" width="1" style="display:none"
-             src="https://www.facebook.com/tr?id=1399495393989987&ev=PageView&noscript=1" />
-    </noscript>
 </body>
 </html>
