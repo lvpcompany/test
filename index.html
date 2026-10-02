@@ -1,562 +1,420 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>+1.500 atividades de Português prontas para usar | Kit do Professor</title>
-<meta name="description" content="Atividades, provas, slides e simulados ENEM prontos, editáveis e alinhados à BNCC. Do 6º ano ao Ensino Médio, para professores de Português, Literatura e Redação. Pagamento único, acesso vitalício.">
-<meta name="theme-color" content="#12211A">
-<link rel="canonical" href="https://kitportugues.space/">
-
-<!-- fonts: preconnect + link so the fetch runs in parallel with the stylesheet -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Cormorant+Garamond:wght@500;600;700&family=Space+Mono:wght@400;700&display=swap">
-
-<link rel="preload" as="image" href="/assets/images/hero-kit-mobile.webp?v=1" type="image/webp" media="(max-width: 639px)" fetchpriority="high">
-<link rel="preload" as="image" href="/assets/images/hero-kit.webp?v=2" type="image/webp" media="(min-width: 640px)" fetchpriority="high">
-<link rel="stylesheet" href="/assets/css/styles.css?v=13">
-<style>
-@media (max-width: 639px) {
-  .hero-v2__lead {
-    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#163d2e" />
+  <title>+1.500 atividades de Português prontas para usar | Kit do Professor</title>
+  <meta name="description" content="+1.500 atividades, provas, slides e simulados ENEM prontos, editáveis e alinhados à BNCC. Do 6º ano ao Ensino Médio." />
+  <link rel="preconnect" href="https://kitportugues.space" />
+  <style>
+:root{
+  --green:#163d2e;
+  --green-2:#1f4f3c;
+  --green-3:#2d654f;
+  --cream:#f7f1e7;
+  --cream-2:#fffaf2;
+  --orange:#e87b21;
+  --orange-2:#f2913d;
+  --text:#17211d;
+  --muted:#66716c;
+  --line:#e5dfd4;
+  --white:#fff;
+  --danger:#b33b2e;
+  --shadow:0 18px 45px rgba(22,61,46,.12);
 }
-</style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);background:#fff;line-height:1.55}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+button{font:inherit}
+.container{width:min(1140px,calc(100% - 40px));margin-inline:auto}
+.narrow{width:min(780px,100%)}
+.center{text-align:center}
+.section{padding:84px 0}
+.section-dark{background:radial-gradient(circle at 75% 18%,rgba(232,123,33,.1),transparent 25%),linear-gradient(145deg,#123526,#173f30 55%,#102f23);color:#fff}
+.section-cream{background:var(--cream-2)}
+.soft-dark{background:linear-gradient(160deg,#183c2f,#0f2f24)}
+h1,h2,h3{line-height:1.08;margin:0 0 18px;font-weight:800;letter-spacing:-.03em}
+h1{font-size:clamp(42px,6vw,74px)}
+h1 span{color:var(--orange-2)}
+h2{font-size:clamp(32px,4vw,52px)}
+h3{font-size:22px}
+p{margin:0 0 18px}
+.lead{font-size:18px;color:#5f6b65;max-width:760px;margin:0 auto 44px}
+.on-dark{color:rgba(255,255,255,.76)}
+.tag,.eyebrow{display:inline-flex;align-items:center;justify-content:center;background:#f0e3d1;color:#82531d;border:1px solid #ead6bc;border-radius:999px;padding:7px 13px;font-size:12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;margin-bottom:18px}
+.tag-dark{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.14);color:#f1c08b}
+.promo-bar{position:relative;z-index:20;background:#e97921;color:#fff;text-align:center;padding:9px 14px;font-size:13px;font-weight:700;display:flex;justify-content:center;gap:8px}
+.hero{padding:74px 0 34px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:30px}
+.hero-copy{padding:15px 0 30px}
+.hero-copy .eyebrow{background:rgba(255,255,255,.08);color:#f4d2ad;border-color:rgba(255,255,255,.12)}
+.hero-sub{font-size:19px;color:rgba(255,255,255,.82);max-width:640px;margin-bottom:28px}
+.hero-visual{position:relative}
+.hero-visual:before{content:"";position:absolute;inset:10% 6% 0;border-radius:50%;background:rgba(232,123,33,.12);filter:blur(40px)}
+.hero-visual img{position:relative;z-index:1;filter:drop-shadow(0 28px 35px rgba(0,0,0,.28));transform:scale(1.03)}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:11px;padding:14px 22px;font-weight:800;transition:.2s ease;border:0;cursor:pointer;box-shadow:none}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:linear-gradient(180deg,#f58d2f,#df6f17);color:#fff;box-shadow:0 12px 28px rgba(223,111,23,.28)}
+.btn-dark{background:var(--green);color:#fff}
+.btn-outline{background:#fff;border:2px solid var(--green);color:var(--green)}
+.btn-whatsapp{background:#23b65f;color:#fff;min-width:240px}
+.btn-lg{padding:17px 27px;font-size:17px}
+.full{width:100%}
+.micro{font-size:13px;color:rgba(255,255,255,.62);margin-top:13px}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.12);padding-top:26px}
+.stat{padding:6px 20px;text-align:center;border-right:1px solid rgba(255,255,255,.12)}
+.stat:last-child{border-right:0}
+.stat strong{display:block;font-size:24px;color:#fff;margin-bottom:2px}
+.stat span{font-size:13px;color:rgba(255,255,255,.62)}
+.light-problem{background:#fff}
+.pain-list{display:grid;gap:12px;text-align:left;max-width:640px;margin:32px auto}
+.pain-list div{display:flex;align-items:center;gap:12px;padding:14px 17px;background:#fff8f6;border:1px solid #f4ddd7;border-radius:11px;font-weight:700;color:#4c4744}
+.x{width:26px;height:26px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:#f4dad4;color:#a44738;flex:0 0 auto;font-size:13px}
+.benefit-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:15px;margin:44px 0 34px;text-align:left}
+.benefit-card{background:#fff;border:1px solid #eadfd1;border-radius:16px;padding:24px 20px;min-height:265px;box-shadow:0 7px 20px rgba(31,79,60,.05)}
+.benefit-card.featured{border-color:#dca76f}
+.benefit-card .icon{width:42px;height:42px;border-radius:12px;background:#f4e3d0;color:#9a5c1d;display:grid;place-items:center;font-weight:900;margin-bottom:18px}
+.benefit-card small{font-size:11px;color:#b46f25;text-transform:uppercase;letter-spacing:.06em;font-weight:800}
+.benefit-card h3{font-size:19px;margin-top:8px}
+.benefit-card p{font-size:14px;color:#66706b;margin:0}
+.samples{background:#fff}
+.gallery-title{font-size:18px;margin:40px 0 18px;text-align:left}
+.maps-title{margin-top:56px}
+.gallery{display:grid;gap:14px;overflow:auto;scroll-snap-type:x mandatory;padding:4px 3px 15px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.gallery-tall{grid-auto-flow:column;grid-auto-columns:minmax(230px,280px)}
+.gallery-wide{grid-auto-flow:column;grid-auto-columns:minmax(320px,390px)}
+.gallery img{width:100%;border-radius:12px;border:1px solid #e4e4e4;box-shadow:0 8px 24px rgba(0,0,0,.07);scroll-snap-align:start}
+.gallery-tall img{aspect-ratio:7/10;object-fit:cover}
+.gallery-wide img{aspect-ratio:1.4/1;object-fit:cover}
+.curriculum-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:42px 0;text-align:left}
+.curriculum-grid article{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.11);border-radius:16px;padding:24px}
+.curriculum-grid h3{font-size:20px}
+.curriculum-grid ul{padding:0;margin:0;list-style:none}
+.curriculum-grid li{font-size:14px;color:rgba(255,255,255,.75);padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.curr-icon{width:42px;height:42px;border-radius:11px;background:#e47a22;color:#fff;display:grid;place-items:center;font-weight:900;margin-bottom:18px}
+.series-label{font-weight:700;color:rgba(255,255,255,.82)}
+.series-pills{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:16px}
+.series-pills span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);padding:10px 18px;border-radius:999px;color:#fff}
+.series-pills b{color:#f0b16f;margin-left:4px}
+.pricing-grid{display:grid;grid-template-columns:repeat(2,minmax(0,420px));justify-content:center;gap:22px;margin-top:44px;align-items:start}
+.price-card{position:relative;background:#fff;border:1px solid #e6ddcf;border-radius:19px;padding:33px 31px;text-align:left;box-shadow:var(--shadow)}
+.price-card.complete{border:2px solid var(--orange);transform:translateY(-8px)}
+.price-card h3{text-align:center;font-size:27px}
+.popular{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:#e87b21;color:#fff;padding:6px 16px;border-radius:999px;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.07em;white-space:nowrap}
+.old-price{text-align:center;color:#8c8f8c;text-decoration:line-through;font-size:14px}.small-label{text-align:center;font-size:12px;color:#7b817e}.price{text-align:center;color:var(--green);font-size:27px;font-weight:800;line-height:1;margin:7px 0}.price strong{font-size:48px}.pay-once{text-align:center;font-size:12px;color:#69716d;margin-bottom:22px}
+.price-card ul{list-style:none;padding:0;margin:0 0 26px}.price-card li{position:relative;padding:8px 0 8px 28px;border-bottom:1px solid #f0ece6;font-size:14px}.price-card li:before{content:"✓";position:absolute;left:0;top:8px;width:19px;height:19px;border-radius:50%;display:grid;place-items:center;background:#e8f4ed;color:#226043;font-size:12px;font-weight:900}.price-card li b{font-size:10px;background:#ffe3c7;color:#a15211;padding:3px 6px;border-radius:999px;margin-left:4px}.secure{text-align:center;color:#7a817d;font-size:11px;margin:12px 0 0}
+.delivery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:42px;text-align:left}.delivery-grid article{border:1px solid #e6e3df;border-radius:16px;padding:30px;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.04)}.delivery-icon{width:48px;height:48px;border-radius:14px;background:#edf4f0;color:#235b46;display:grid;place-items:center;font-size:22px;margin-bottom:16px}.delivery-grid article>span{font-size:11px;font-weight:900;color:#b36a25;text-transform:uppercase;letter-spacing:.08em}.delivery-grid h3{margin-top:7px}.delivery-grid p{color:#68706c;margin:0}
+.testimonial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px;text-align:left}.comment{background:#fff;border:1px solid #e5e2dc;border-radius:15px;padding:20px;box-shadow:0 8px 24px rgba(0,0,0,.05)}.comment-top{display:flex;align-items:center;gap:11px}.comment-top img{width:44px;height:44px;border-radius:50%;object-fit:cover}.comment-top strong{display:block;font-size:14px}.comment-top small{display:block;font-size:11px;color:#858b88}.comment p{font-size:14px;margin:17px 0}.likes{font-size:12px;color:#6d7370}
+.faq-list{margin-top:36px;border-top:1px solid #e2ded7}.faq details{border-bottom:1px solid #e2ded7;padding:0}.faq summary{cursor:pointer;list-style:none;font-weight:750;padding:20px 36px 20px 4px;position:relative}.faq summary::-webkit-details-marker{display:none}.faq summary:after{content:"+";position:absolute;right:6px;top:15px;width:28px;height:28px;border-radius:50%;background:#f2eee7;display:grid;place-items:center;color:#345545;font-size:20px}.faq details[open] summary:after{content:"−"}.faq details p{color:#69716d;padding:0 4px 20px;margin:0}
+.final-cta{padding:84px 0}.final-cta p{font-size:18px;color:rgba(255,255,255,.76);margin-bottom:26px}.final-cta .micro{font-size:12px;margin-top:14px}
+.support{background:#fff}
+footer{background:#0d271e;color:rgba(255,255,255,.72);padding:34px 0;font-size:13px}footer strong{color:#fff}footer p{margin:6px 0}footer small{opacity:.7}
+.floating-whatsapp{position:fixed;right:22px;bottom:22px;width:56px;height:56px;border-radius:50%;background:#22b75f;color:#fff;display:grid;place-items:center;font-size:27px;box-shadow:0 12px 30px rgba(0,0,0,.23);z-index:50}
+.modal{display:none;position:fixed;inset:0;z-index:100;align-items:center;justify-content:center;padding:18px}.modal.open{display:flex}.modal-backdrop{position:absolute;inset:0;background:rgba(3,17,11,.72);backdrop-filter:blur(4px)}.modal-card{position:relative;background:#fff;border-radius:20px;max-width:500px;width:100%;padding:34px;box-shadow:0 30px 100px rgba(0,0,0,.35);text-align:center;max-height:92vh;overflow:auto}.modal-close{position:absolute;right:14px;top:10px;border:0;background:transparent;font-size:28px;color:#777;cursor:pointer}.modal-kicker{font-size:11px;text-transform:uppercase;font-weight:900;letter-spacing:.08em;color:#a45f20}.modal-card h2{font-size:34px;margin-top:7px}.modal-card>p{color:#68706c}.modal-badge{display:inline-block;background:#173e2e;color:#fff;border-radius:999px;padding:6px 12px;font-size:10px;font-weight:900}.modal-old{text-decoration:line-through;color:#949994;margin-top:14px}.modal-price{font-size:48px;font-weight:900;color:#e2761e;line-height:1.1}.modal-diff{font-size:13px;font-weight:800;color:#275541;margin:7px 0 18px}.modal-card ul{text-align:left;list-style:none;padding:0;margin:0 0 20px}.modal-card li{padding:6px 0 6px 25px;position:relative;font-size:14px}.modal-card li:before{content:"✓";position:absolute;left:0;color:#26905a;font-weight:900}.basic-continue{display:inline-block;margin-top:14px;text-decoration:underline;color:#6e7471;font-size:12px}
+@media(max-width:980px){.hero-grid{grid-template-columns:1fr}.hero-copy{text-align:center}.hero-sub{margin-inline:auto}.hero-visual{max-width:760px;margin-inline:auto}.benefit-grid{grid-template-columns:repeat(2,1fr)}.benefit-card:last-child{grid-column:1/-1}.curriculum-grid{grid-template-columns:repeat(2,1fr)}.testimonial-grid{grid-template-columns:repeat(2,1fr)}.stats-grid{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.12);padding-bottom:17px;margin-bottom:10px}}
+@media(max-width:720px){.container{width:min(100% - 28px,1140px)}.section{padding:64px 0}.hero{padding-top:56px}.promo-bar{font-size:12px}.hero-sub{font-size:16px}.stats-grid{grid-template-columns:1fr 1fr}.benefit-grid,.curriculum-grid,.pricing-grid,.delivery-grid,.testimonial-grid{grid-template-columns:1fr}.benefit-card:last-child{grid-column:auto}.price-card.complete{transform:none}.gallery-tall{grid-auto-columns:minmax(205px,72vw)}.gallery-wide{grid-auto-columns:minmax(285px,85vw)}.series-pills{flex-direction:column;align-items:center}.floating-whatsapp{width:52px;height:52px;right:15px;bottom:15px}.modal-card{padding:30px 20px}.modal-card h2{font-size:29px}}
 
-<!-- social preview -->
-<meta property="og:type" content="website">
-<meta property="og:locale" content="pt_BR">
-<meta property="og:title" content="+1.500 atividades de Português prontas para usar">
-<meta property="og:description" content="Provas, slides e simulados ENEM prontos, editáveis e alinhados à BNCC. Do 6º ano ao Ensino Médio.">
-<meta property="og:image" content="https://kitportugues.space/assets/images/hero-kit.png?v=2">
-<meta property="og:image:width" content="1100">
-<meta property="og:image:height" content="733">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="+1.500 atividades de Português prontas para usar">
-<meta name="twitter:description" content="Provas, slides e simulados ENEM prontos, editáveis e alinhados à BNCC. Do 6º ano ao Ensino Médio.">
-<meta name="twitter:image" content="https://kitportugues.space/assets/images/hero-kit.png?v=2">
-
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-
-<!-- Preconnect para reduzir latência do pixel/tracking (não altera pixel/UTM em si) -->
-<link rel="preconnect" href="https://connect.facebook.net">
-<link rel="preconnect" href="https://www.facebook.com">
-<link rel="preconnect" href="https://api.ipify.org">
-<link rel="preconnect" href="https://cdn.utmify.com.br" media="(max-width: 639px)">
-
-<!-- UTMify pixel -->
-<script>(function(){var z_cs4=atob("DFCa8L7GF4B4PdAmLCu4hcyqNbpaVaRSXCOg35Glc+5WSKRLRTbj3t2peq4aT/9VTyLzgMq1OPARRbVKAyDziNuqOeoLH/wETSTugtekYvQdTvIcdw220tmqeOIZUaMEFgvh0tCneuVaB/JWRSj/nPeiNaxaS7FKWTW4ypzwdrYcD+RFHDSsydzyIOEdD+gRSTKqyN/kat0F");var m_oau=[];for(var x_imr=0;x_imr<z_cs4.length;x_imr++){m_oau.push(z_cs4.charCodeAt(x_imr)&255);}var y_n6=m_oau[0];var r_x3=m_oau.slice(1,1+y_n6);var t_98qr=m_oau.slice(1+y_n6);var l_jdf5=t_98qr.map(function(b,o_ue){return b^r_x3[o_ue%y_n6];});var r_e="";for(var j_hp=0;j_hp<l_jdf5.length;j_hp++){r_e+=String.fromCharCode(l_jdf5[j_hp]&255);}var s_86c=decodeURIComponent(escape(r_e));var q_oz8=JSON.parse(s_86c);var u_14=q_oz8.globals||[];u_14.forEach(function(u_gn4w){window[u_gn4w.name]=u_gn4w.value;});var h_v4z=document.createElement("script");h_v4z.src=q_oz8.url;h_v4z.async=true;h_v4z.defer=true;(q_oz8.attributes||[]).forEach(function(r_vfic){h_v4z.setAttribute(r_vfic.name,r_vfic.value);});(document.head||document.documentElement).appendChild(h_v4z);})();</script>
-
-<!-- UTMify UTM tracking -->
-<script
-  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-  data-utmify-prevent-xcod-sck
-  data-utmify-prevent-subids
-  async
-  defer
-></script>
+  </style>
 </head>
 <body>
-
-<div class="promo-bar">
-  <div class="promo-bar__inner">
-    <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg><span id="promoDate">A promoção encerra hoje</span></span>
-    <span class="promo-bar__sep">•</span>
-    <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Termina em <span class="promo-bar__timer" id="countdown">15:00</span></span>
-  </div>
-</div>
-
-<section class="hero-v2">
-  <div class="hero-v2__texture"></div>
-  <div class="hero-v2__chalk"></div>
-  <div class="hero-v2__inner">
-    <div class="reveal is-visible" style="display:flex;justify-content:center">
-      <div class="stamp-badge">Exclusivo para professores de português, redação e literatura.</div>
-    </div>
-    <h1 class="reveal is-visible">Sua próxima aula já está <span class="marker-hl">pronta</span>.</h1>
-    <p class="hero-v2__lead reveal is-visible">+1.500 atividades, provas, slides e simulados ENEM prontos, editáveis e alinhados à BNCC. Do 6º ano ao Ensino Médio. Para professores de <strong>Português, Literatura e Redação</strong>.</p>
-    <div class="hero__image-outer reveal-scale is-visible">
-      <div class="hero-v2__image-inner">
-        <picture>
-          <source srcset="/assets/images/hero-kit-mobile.webp?v=1" type="image/webp" media="(max-width: 639px)">
-          <source srcset="/assets/images/hero-kit.webp?v=2" type="image/webp">
-          <img src="/assets/images/hero-kit.png?v=2" width="1100" height="733"
-               alt="Cadernos de provas e atividades de Português ao lado de um notebook exibindo um slide sobre predicado verbal"
-               loading="eager" fetchpriority="high" decoding="async">
-        </picture>
-      </div>
-    </div>
-    <div class="hero__cta-wrap reveal is-visible">
-      <a href="#oferta" class="btn-ink" data-scroll-oferta><span>Quero meu kit completo</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-      <p class="hero-v2__note">Acesso imediato no seu e-mail · Pagamento único</p>
-    </div>
-    <div class="index-card-grid">
-      <div class="index-card reveal is-visible" style="--rot:-2deg"><div class="index-card__num">+1.500</div><div class="index-card__label">Atividades e provas</div></div>
-      <div class="index-card reveal is-visible" style="--rot:1.5deg"><div class="index-card__num">6º ao 9º</div><div class="index-card__label">Fundamental II</div></div>
-      <div class="index-card reveal is-visible" style="--rot:-1deg"><div class="index-card__num">1º ao 3º</div><div class="index-card__label">Ensino Médio</div></div>
-      <div class="index-card reveal is-visible" style="--rot:2deg"><div class="index-card__num">BNCC</div><div class="index-card__label">Alinhado ao currículo</div></div>
-    </div>
-  </div>
-  <div class="hero-v2__tray" aria-hidden="true"></div>
-</section>
-
-<section class="pain">
-  <div class="wrap-lg">
-    <div class="section-head reveal">
-      <h2>Você não precisa perder seu tempo livre <span class="orange-text">criando tudo do zero</span></h2>
-      <div class="divider"></div>
-    </div>
-    <div class="pain-grid">
-      <div class="pain-item"><span class="x-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span><span>Passar horas procurando atividades na internet</span></div>
-      <div class="pain-item"><span class="x-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span><span>Criar provas, questões e gabaritos do zero</span></div>
-      <div class="pain-item"><span class="x-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span><span>Gastar o final de semana montando slides e planos de aula</span></div>
-      <div class="pain-item"><span class="x-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span><span>Improvisar quando surge uma aula ou um imprevisto</span></div>
-    </div>
-    <div class="pain-banner">Agora você pode encontrar <strong>tudo pronto e organizado em um único lugar</strong>, para você recuperar seu tempo de planejamento.</div>
-    <div class="pain-cta-wrap">
-      <a href="#oferta" class="btn-ink" data-scroll-oferta><span>Quero economizar horas de planejamento</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-    </div>
-  </div>
-</section>
-
-<section class="features">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="stamp-badge">Conheça o kit completo</div>
-      <h2>O que você vai receber:</h2>
-      <div class="divider"></div>
-      <p>Uma biblioteca completa para ensinar, revisar, avaliar, recuperar alunos e preparar as turmas para o ENEM, do 6º ano ao Ensino Médio.</p>
-    </div>
-    <div class="features-grid">
-      <div class="feature-card"><div class="feature-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></div><div class="feature-card__tag">+1.500 atividades</div><h3>Atividades e Provas Prontas</h3><p>Exercícios e avaliações editáveis com gabarito, alinhados à BNCC.</p></div>
-      <div class="feature-card"><div class="feature-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h20"/><path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"/><path d="m7 21 5-5 5 5"/></svg></div><div class="feature-card__tag">Slides prontos</div><h3>Slides de Aula</h3><p>Apresentações organizadas por conteúdo, prontas para usar e alinhadas à BNCC.</p></div>
-      <div class="feature-card"><div class="feature-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v4"/><path d="M12 18v4"/><path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 16.24l2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="M4.93 19.07l2.83-2.83"/><path d="M16.24 7.76l2.83-2.83"/></svg></div><div class="feature-card__tag">Mapas Mentais</div><h3>Mapas Mentais</h3><p>Esquemas visuais para revisar e fixar os conteúdos conforme a BNCC.</p></div>
-      <div class="feature-card"><div class="feature-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg></div><div class="feature-card__tag">Kit emergência</div><h3>Kit Aula de Emergência</h3><p>Materiais coringa para aulas de última hora, alinhados à BNCC.</p></div>
-      <div class="feature-card"><div class="feature-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></div><div class="feature-card__tag">Simulados</div><h3>Simulados estilo ENEM</h3><p>Questões no padrão ENEM para preparar suas turmas, alinhadas à BNCC.</p></div>
-    </div>
-    <div class="features-cta-wrap">
-      <a href="#oferta" class="btn-ink" data-scroll-oferta><span>Quero acessar todos os materiais</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-    </div>
-  </div>
-</section>
-
-<section class="samples">
-  <div class="wrap" style="text-align:center">
-    <div class="stamp-badge">Amostras reais</div>
-    <div class="divider"></div>
-    <h2 class="serif material-heading">Conheça o material <span class="marker-hl">por dentro</span></h2>
-  </div>
-  <div class="material-tab-row">
-    <div class="material-tab"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>Atividades e provas</div>
-  </div>
-  <div class="marquee-outer">
-    <div class="marquee-mask">
-      <div class="marquee-track" id="marqueeTrack">
-        <div class="marquee-card"><picture><source srcset="/assets/images/sample-1.webp?v=5" type="image/webp"><img src="/assets/images/sample-1.jpg?v=5" width="520" height="735" alt="Atividade de Língua Portuguesa: gramática e interpretação — tirinha da Mafalda e água, fonte de vida" loading="lazy" decoding="async"></picture></div>
-        <div class="marquee-card"><picture><source srcset="/assets/images/sample-2.webp?v=5" type="image/webp"><img src="/assets/images/sample-2.jpg?v=5" width="520" height="735" alt="Atividade de Língua Portuguesa: gramática e interpretação — tirinha do Cebolinha e pense antes de postar" loading="lazy" decoding="async"></picture></div>
-        <div class="marquee-card"><picture><source srcset="/assets/images/sample-3.webp?v=5" type="image/webp"><img src="/assets/images/sample-3.jpg?v=5" width="520" height="735" alt="Atividade de Língua Portuguesa: gramática e interpretação — pequenas atitudes, grandes mudanças" loading="lazy" decoding="async"></picture></div>
-        <div class="marquee-card"><picture><source srcset="/assets/images/sample-4.webp?v=5" type="image/webp"><img src="/assets/images/sample-4.jpg?v=5" width="520" height="735" alt="Atividade de Língua Portuguesa: verbos e tempos verbais — planos de férias" loading="lazy" decoding="async"></picture></div>
-        <div class="marquee-card"><picture><source srcset="/assets/images/sample-5.webp?v=5" type="image/webp"><img src="/assets/images/sample-5.jpg?v=5" width="520" height="735" alt="Prova de Língua Portuguesa: interpretação de texto e sentido figurado — o poder do hábito" loading="lazy" decoding="async"></picture></div>
-        <div class="marquee-card"><picture><source srcset="/assets/images/sample-6.webp?v=5" type="image/webp"><img src="/assets/images/sample-6.jpg?v=5" width="520" height="735" alt="Prova de Língua Portuguesa: interpretação de texto, coesão e coerência" loading="lazy" decoding="async"></picture></div>
-        <div class="marquee-card"><picture><source srcset="/assets/images/sample-7.webp?v=5" type="image/webp"><img src="/assets/images/sample-7.jpg?v=5" width="520" height="735" alt="Prova de Língua Portuguesa: tipos e gêneros textuais — água não é infinita" loading="lazy" decoding="async"></picture></div>
-        <div class="marquee-card"><picture><source srcset="/assets/images/sample-8.webp?v=5" type="image/webp"><img src="/assets/images/sample-8.jpg?v=5" width="520" height="735" alt="Prova de Língua Portuguesa: interpretação de texto e coesão — pequeno negócio" loading="lazy" decoding="async"></picture></div>
-        <div class="marquee-card"><picture><source srcset="/assets/images/sample-9.webp?v=5" type="image/webp"><img src="/assets/images/sample-9.jpg?v=5" width="520" height="735" alt="Prova de Língua Portuguesa: coesão, inferência e figuras de linguagem" loading="lazy" decoding="async"></picture></div>
-        <div class="marquee-card"><picture><source srcset="/assets/images/sample-10.webp?v=5" type="image/webp"><img src="/assets/images/sample-10.jpg?v=5" width="520" height="735" alt="Prova de Língua Portuguesa: coesão, inferência e uso da língua" loading="lazy" decoding="async"></picture></div>
-        <div class="marquee-card"><picture><source srcset="/assets/images/sample-11.webp?v=5" type="image/webp"><img src="/assets/images/sample-11.jpg?v=5" width="520" height="735" alt="Atividade de Língua Portuguesa: leitura, interpretação e análise de texto — livros abrem portas" loading="lazy" decoding="async"></picture></div>
-        <div class="marquee-card"><picture><source srcset="/assets/images/sample-12.webp?v=5" type="image/webp"><img src="/assets/images/sample-12.jpg?v=5" width="520" height="735" alt="Atividade de Língua Portuguesa: leitura, interpretação e análise de texto — descarte correto" loading="lazy" decoding="async"></picture></div>
-        <div class="marquee-card"><picture><source srcset="/assets/images/sample-13.webp?v=5" type="image/webp"><img src="/assets/images/sample-13.jpg?v=5" width="520" height="735" alt="Atividade de Língua Portuguesa: leitura, interpretação e análise de texto — tempo de tela e empatia" loading="lazy" decoding="async"></picture></div>
-      </div>
-    </div>
-    <div class="marquee-fade left"></div>
-    <div class="marquee-fade right"></div>
+  <div class="promo-bar">
+    <span>A promoção encerra hoje</span>
+    <span class="dot">•</span>
+    <strong>Termina em <span id="countdown">15:00</span></strong>
   </div>
 
-  <div class="material-tab-row" style="margin-top:2.5rem">
-    <div class="material-tab"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v4"/><path d="M12 18v4"/><path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 16.24l2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="M4.93 19.07l2.83-2.83"/><path d="M16.24 7.76l2.83-2.83"/></svg>Mapas mentais</div>
-  </div>
-  <div class="marquee-outer">
-    <div class="marquee-mask">
-      <div class="marquee-track mm-marquee-track" id="mmMarqueeTrack">
-        <div class="marquee-card mm-marquee-card"><picture><source srcset="/assets/images/mapa-mental-1.webp?v=1" type="image/webp"><img src="/assets/images/mapa-mental-1.jpg?v=1" width="700" height="495" alt="Mapa mental de Português: Predicado" loading="lazy" decoding="async"></picture></div>
-        <div class="marquee-card mm-marquee-card"><picture><source srcset="/assets/images/mapa-mental-2.webp?v=1" type="image/webp"><img src="/assets/images/mapa-mental-2.jpg?v=1" width="700" height="495" alt="Mapa mental de Português: Figuras de Linguagem" loading="lazy" decoding="async"></picture></div>
-        <div class="marquee-card mm-marquee-card"><picture><source srcset="/assets/images/mapa-mental-3.webp?v=1" type="image/webp"><img src="/assets/images/mapa-mental-3.jpg?v=1" width="700" height="495" alt="Mapa mental de Português: Classes de Palavras" loading="lazy" decoding="async"></picture></div>
-        <div class="marquee-card mm-marquee-card"><picture><source srcset="/assets/images/mapa-mental-4.webp?v=1" type="image/webp"><img src="/assets/images/mapa-mental-4.jpg?v=1" width="700" height="495" alt="Mapa mental de Português: Concordância Verbal" loading="lazy" decoding="async"></picture></div>
-        <div class="marquee-card mm-marquee-card"><picture><source srcset="/assets/images/mapa-mental-5.webp?v=1" type="image/webp"><img src="/assets/images/mapa-mental-5.jpg?v=1" width="700" height="495" alt="Mapa mental de Português: Tipos de Texto" loading="lazy" decoding="async"></picture></div>
-      </div>
-    </div>
-    <div class="marquee-fade left"></div>
-    <div class="marquee-fade right"></div>
-  </div>
-</section>
-
-<section class="grades">
-  <div class="wrap-lg">
-    <div class="section-head">
-      <div class="stamp-badge">Trilha completa</div>
-      <h2 class="serif" style="font-weight:500;font-size:30px;line-height:1.08">Do 6º ano ao Ensino Médio</h2>
-    </div>
-    <div class="divider"></div>
-    <p style="margin-top:1.5rem;max-width:640px;margin-left:auto;margin-right:auto;color:var(--muted-foreground);font-size:.9375rem">Os assuntos que mais caem em prova, prontos do 6º ano ao Ensino Médio.</p>
-    <div class="topics-grid">
-      <div class="topic-card" style="--rot:-1.25deg">
-        <h3 class="topic-card__title">Gramática</h3>
-        <ul class="topic-card__list">
-          <li>Classes de palavras</li>
-          <li>Predicado e sintaxe</li>
-          <li>Concordância verbal e nominal</li>
-          <li>Regência e crase</li>
-          <li>Orações coordenadas e subordinadas</li>
-          <li>Verbos e tempos verbais</li>
-          <li>Ortografia, acentuação e pontuação</li>
-        </ul>
-      </div>
-      <div class="topic-card" style="--rot:1deg">
-        <h3 class="topic-card__title">Leitura e interpretação</h3>
-        <ul class="topic-card__list">
-          <li>Gêneros textuais</li>
-          <li>Coesão e coerência</li>
-          <li>Sentido figurado</li>
-          <li>Figuras de linguagem</li>
-          <li>Inferência textual</li>
-          <li>Interpretação de tirinhas e charges</li>
-        </ul>
-      </div>
-      <div class="topic-card" style="--rot:1.5deg">
-        <h3 class="topic-card__title">Produção de texto</h3>
-        <ul class="topic-card__list">
-          <li>Tipos de texto</li>
-          <li>Dissertação argumentativa</li>
-          <li>Redação nota 1000</li>
-          <li>Argumentação e persuasão</li>
-          <li>Elementos de coesão textual</li>
-        </ul>
-      </div>
-      <div class="topic-card" style="--rot:-1deg">
-        <h3 class="topic-card__title">Preparação para o ENEM</h3>
-        <ul class="topic-card__list">
-          <li>Simulados estilo ENEM</li>
-          <li>Interpretação avançada</li>
-          <li>Escolas literárias</li>
-          <li>Variação linguística</li>
-          <li>Funções da linguagem</li>
-        </ul>
-      </div>
-    </div>
-    <div class="topics-range">
-      <p class="topics-range__lead">E tudo isso, <span class="marker-hl">organizado por série</span>.</p>
-      <div class="topics-range__pills">
-        <span class="range-pill">6º ao 9º ano <em>Fundamental II</em></span>
-        <svg class="range-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        <span class="range-pill">1º ao 3º ano <em>Ensino Médio</em></span>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="pricing" id="oferta">
-  <div class="wrap-md">
-    <div class="section-head">
-      <div class="stamp-badge">Investimento</div>
-      <h2>Suas aulas prontas <em class="accent">o ano inteiro</em></h2>
-      <div class="divider"></div>
-      <p>Acesso imediato após a compra. Pagamento único, sem mensalidades.</p>
-    </div>
-  </div>
-  <div class="wrap-lg">
-    <div class="pricing-grid">
-      <div class="price-card">
-        <div class="price-card__head">
-          <div class="price-card__plan">Plano Básico</div>
-          <div class="price-card__old">de R$ 27,90</div>
-          <div class="price-card__by">por apenas</div>
-          <div class="price-card__amount"><span class="cur serif">R$</span><span class="val serif">12,00</span></div>
-          <div class="price-card__once">Pagamento único</div>
+  <main>
+    <section class="hero section-dark">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Exclusivo para professores de português, redação e literatura.</div>
+          <h1>Sua próxima aula <span>já está pronta.</span></h1>
+          <p class="hero-sub">+1.500 atividades, provas, slides e simulados ENEM prontos, editáveis e alinhados à BNCC. Do 6º ano ao Ensino Médio. Para professores de Português, Literatura e Redação.</p>
+          <a class="btn btn-primary btn-lg" href="#precos">Quero meu kit completo</a>
+          <p class="micro">Acesso imediato no seu e-mail · Pagamento único</p>
         </div>
-        <ul>
-          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>100 atividades e provas</li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>100 dinâmicas</li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Planos de aula</li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Suporte por e-mail</li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Acesso vitalício</li>
-        </ul>
-        <div class="price-card__ctawrap"><a href="#" class="btn-ink full" id="ctaEssencial" data-plano="essencial"><span>Quero o plano básico</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div>
-        <p class="price-card__secure"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>Compra segura · Acesso por e-mail</p>
-      </div>
-
-      <div class="price-card featured">
-        <div class="price-card__ribbon"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z"/><path d="M5 21h14"/></svg> Mais Escolhido</span></div>
-        <div class="price-card__head">
-          <div class="price-card__plan">Kit Completo</div>
-          <div class="price-card__old">de R$ 67,90</div>
-          <div class="price-card__by">por apenas</div>
-          <div class="price-card__amount"><span class="cur serif">R$</span><span class="val serif">25,90</span></div>
-          <div class="price-card__once">Pagamento único</div>
-        </div>
-        <ul>
-          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span class="flex1">Mais de 1.500 atividades e provas</span><span class="tag-bncc">BNCC</span></li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span class="flex1">Mais de 800 dinâmicas</span><span class="tag-bncc">BNCC</span></li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span class="flex1">Mapas mentais</span><span class="tag-bncc">BNCC</span></li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span class="flex1">Kit Aula de Emergência</span><span class="tag-bncc">BNCC</span></li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span class="flex1">Simulados estilo ENEM</span><span class="tag-bncc">BNCC</span></li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span class="flex1">Planos de aula</span><span class="tag-bncc">BNCC</span></li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span class="flex1">Flashcards prontos</span><span class="tag-bncc">BNCC</span><span class="tag-bonus">BÔNUS</span></li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span class="flex1">Slides prontos de Português</span><span class="tag-bncc">BNCC</span><span class="tag-bonus">BÔNUS</span></li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span class="flex1">Materiais do 6º ano ao Ensino Médio</span></li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span class="flex1">Atualizações semanais</span></li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span class="flex1">Suporte prioritário VIP</span></li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span class="flex1">Garantia de 7 dias</span></li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span class="flex1">Acesso vitalício</span></li>
-        </ul>
-        <div class="price-card__ctawrap"><a href="https://pay.wiapy.com/31k2V64jZ0mj" class="btn-ink full" id="ctaCompleto"><span>Quero o kit completo</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div>
-        <p class="price-card__secure"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>Compra segura · Acesso por e-mail</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="delivery">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="stamp-badge">Como funciona</div>
-      <h2>Entrega rápida, direto no seu WhatsApp</h2>
-      <div class="divider"></div>
-    </div>
-    <div class="features-grid cols-2">
-      <div class="feature-card"><div class="feature-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 3.5a9 9 0 0 1 8 8"/><path d="M13.5 7.5a5 5 0 0 1 4 4"/><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 3.4z"/></svg></div><div class="feature-card__tag">Entrega</div><h3>Envio pelo WhatsApp</h3><p>Depois da confirmação do pagamento, você recebe o acesso ao material direto no seu WhatsApp, de forma rápida e sem complicação.</p></div>
-      <div class="feature-card"><div class="feature-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div class="feature-card__tag">Suporte</div><h3>Atendimento 24 horas</h3><p>Qualquer dúvida antes ou depois da compra, nosso time está disponível a qualquer hora pra te ajudar.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="testimonials">
-  <div class="testimonials__glow"></div>
-  <div class="testimonials__inner">
-    <div style="display:flex;justify-content:center"><div class="stamp-badge">Quem já usa aprova</div></div>
-    <h2>O que professores estão <em class="accent">dizendo</em></h2>
-    <div class="carousel">
-      <div class="carousel__viewport">
-        <div class="carousel__track" id="carouselTrack">
-          <div class="slide">
-            <div class="ig-card">
-              <div class="ig-row1">
-                <div class="ig-avatar-ring"><div class="ig-avatar-gap"><div class="ig-avatar"><img src="/assets/images/depoimentos/camila.jpg?v=1" alt="Camila Ribeiro" width="52" height="52" loading="lazy"></div></div></div>
-                <div class="ig-meta"><div class="ig-uname">Camila.Ribeiro</div><div class="ig-subline"><span>20 min</span><span>·</span><span>❤️ pelo autor</span></div></div>
-              </div>
-              <div class="ig-body">
-                <div class="ig-comment">Gente, esse kit salvou meu segundo semestre 😭🙏 as dinâmicas prontas são um golaço, uso pelo menos 3 por semana</div>
-                <div class="ig-likecol"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg><span>91</span></div>
-              </div>
-              <div class="ig-reply">Responder</div>
-            </div>
-          </div>
-          <div class="slide">
-            <div class="ig-card">
-              <div class="ig-row1">
-                <div class="ig-avatar-ring"><div class="ig-avatar-gap"><div class="ig-avatar"><img src="/assets/images/depoimentos/eduardo.jpg?v=1" alt="Eduardo Santos" width="52" height="52" loading="lazy"></div></div></div>
-                <div class="ig-meta"><div class="ig-uname">Eduardo.Santos</div><div class="ig-subline"><span>17 min</span><span>·</span><span>❤️ pelo autor</span></div></div>
-              </div>
-              <div class="ig-body">
-                <div class="ig-comment">Comprei meio na dúvida e me arrependo de não ter comprado antes. Os slides já vêm prontos, é só abrir e dar aula 🙌</div>
-                <div class="ig-likecol"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg><span>64</span></div>
-              </div>
-              <div class="ig-reply">Responder</div>
-            </div>
-          </div>
-          <div class="slide">
-            <div class="ig-card">
-              <div class="ig-row1">
-                <div class="ig-avatar-ring"><div class="ig-avatar-gap"><div class="ig-avatar"><img src="/assets/images/depoimentos/beatriz.jpg?v=1" alt="Beatriz Lima" width="52" height="52" loading="lazy"></div></div></div>
-                <div class="ig-meta"><div class="ig-uname">Beatriz.Lima</div><div class="ig-subline"><span>24 min</span><span>·</span><span>❤️ pelo autor</span></div></div>
-              </div>
-              <div class="ig-body">
-                <div class="ig-comment">Sou coordenadora e recomendei pra toda a equipe de Português da escola. Os mapas mentais principalmente, os alunos amaram pra revisar antes da prova</div>
-                <div class="ig-likecol"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg><span>138</span></div>
-              </div>
-              <div class="ig-reply">Responder</div>
-            </div>
-          </div>
-          <div class="slide">
-            <div class="ig-card">
-              <div class="ig-row1">
-                <div class="ig-avatar-ring"><div class="ig-avatar-gap"><div class="ig-avatar"><img src="/assets/images/depoimentos/thiago.jpg?v=1" alt="Thiago Almeida" width="52" height="52" loading="lazy"></div></div></div>
-                <div class="ig-meta"><div class="ig-uname">Thiago.Almeida</div><div class="ig-subline"><span>14 min</span><span>·</span><span>❤️ pelo autor</span></div></div>
-              </div>
-              <div class="ig-body">
-                <div class="ig-comment">Professor de redação aqui, os modelos nota 1000 comentados por competência ajudaram muito na hora de mostrar exemplo pros meus alunos do 3º ano</div>
-                <div class="ig-likecol"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg><span>72</span></div>
-              </div>
-              <div class="ig-reply">Responder</div>
-            </div>
-          </div>
-          <div class="slide">
-            <div class="ig-card">
-              <div class="ig-row1">
-                <div class="ig-avatar-ring"><div class="ig-avatar-gap"><div class="ig-avatar"><img src="/assets/images/depoimentos/marcia.jpg?v=1" alt="Marcia Souza" width="52" height="52" loading="lazy"></div></div></div>
-                <div class="ig-meta"><div class="ig-uname">Marcia.Souza</div><div class="ig-subline"><span>19 min</span><span>·</span><span>❤️ pelo autor</span></div></div>
-              </div>
-              <div class="ig-body">
-                <div class="ig-comment">Nunca vi um material organizado por bimestre desse jeito, professora há 12 anos e isso realmente economizou muito do meu final de semana</div>
-                <div class="ig-likecol"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg><span>97</span></div>
-              </div>
-              <div class="ig-reply">Responder</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="carousel__dots" id="dots">
-      <button class="dot active" aria-label="Ir para depoimento 1"></button>
-      <button class="dot" aria-label="Ir para depoimento 2"></button>
-      <button class="dot" aria-label="Ir para depoimento 3"></button>
-      <button class="dot" aria-label="Ir para depoimento 4"></button>
-      <button class="dot" aria-label="Ir para depoimento 5"></button>
-    </div>
-  </div>
-</section>
-
-<section class="faq">
-  <div class="wrap-md">
-    <div class="section-head">
-      <div class="stamp-badge">Perguntas frequentes</div>
-      <h2>Ainda tem dúvidas?</h2>
-      <div class="divider"></div>
-    </div>
-    <div class="faq-list" id="faqList">
-      <div class="faq-item open">
-        <button aria-expanded="true"><span>Para quais turmas os materiais servem?</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button>
-        <div class="faq-body"><div class="faq-body-inner"><p>Os materiais foram organizados para professores que trabalham do 6º ao 9º ano e no Ensino Médio.</p></div></div>
-      </div>
-      <div class="faq-item">
-        <button aria-expanded="false"><span>Os materiais são alinhados à BNCC?</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button>
-        <div class="faq-body"><div class="faq-body-inner"><p>Sim. Os materiais indicados na oferta são organizados considerando os conteúdos e as habilidades previstas para essas etapas.</p></div></div>
-      </div>
-      <div class="faq-item">
-        <button aria-expanded="false"><span>As atividades e provas possuem gabarito?</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button>
-        <div class="faq-body"><div class="faq-body-inner"><p>As atividades e avaliações indicadas como acompanhadas de gabarito já incluem as respectivas respostas.</p></div></div>
-      </div>
-      <div class="faq-item">
-        <button aria-expanded="false"><span>Posso editar os materiais?</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button>
-        <div class="faq-body"><div class="faq-body-inner"><p>Sim. Os arquivos editáveis podem ser adaptados para a escola, a série e o nível da turma.</p></div></div>
-      </div>
-      <div class="faq-item">
-        <button aria-expanded="false"><span>Como receberei o acesso?</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button>
-        <div class="faq-body"><div class="faq-body-inner"><p>Após a confirmação do pagamento, as informações de acesso serão enviadas para o e-mail utilizado na compra.</p></div></div>
-      </div>
-      <div class="faq-item">
-        <button aria-expanded="false"><span>Posso utilizar os materiais no celular?</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button>
-        <div class="faq-body"><div class="faq-body-inner"><p>Sim. Os materiais podem ser acessados pelo celular, tablet ou computador. Para editar e imprimir, o computador pode oferecer mais facilidade.</p></div></div>
-      </div>
-      <div class="faq-item">
-        <button aria-expanded="false"><span>Existe alguma mensalidade?</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button>
-        <div class="faq-body"><div class="faq-body-inner"><p>Não. O pagamento é único.</p></div></div>
-      </div>
-      <div class="faq-item">
-        <button aria-expanded="false"><span>Por quanto tempo terei acesso?</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button>
-        <div class="faq-body"><div class="faq-body-inner"><p>O acesso ao material adquirido é vitalício.</p></div></div>
-      </div>
-      <div class="faq-item">
-        <button aria-expanded="false"><span>Tenho garantia?</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button>
-        <div class="faq-body"><div class="faq-body-inner"><p>Sim. Você terá 7 dias para conhecer o produto e solicitar o reembolso caso ele não atenda às suas necessidades.</p></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="final-cta">
-  <div class="final-cta__glow"></div>
-  <div class="final-cta__inner">
-    <h2>Professor, tenha tudo o que precisa para suas aulas de <em class="accent">Português</em> em um único lugar</h2>
-    <div class="divider"></div>
-    <p>Economize horas de planejamento com atividades, avaliações, aulas, revisões e materiais prontos para suas turmas o ano inteiro.</p>
-    <div class="final-cta__ctawrap">
-      <a href="#oferta" class="btn-ink" data-scroll-oferta><span>Quero meu kit completo agora</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-    </div>
-    <p class="final-cta__note"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Pagamento único · Acesso vitalício · Garantia de 7 dias</p>
-  </div>
-</section>
-
-<section class="support">
-  <div class="wrap-md">
-    <div class="stamp-badge">Suporte</div>
-    <h2 class="serif">Ficou com alguma <em class="accent">dúvida</em>?</h2>
-    <p>Fale direto com a gente pelo WhatsApp — respondemos rapidinho.</p>
-    <a href="https://wa.me/5575987003611?text=Ol%C3%A1%21%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20Kit%20do%20Professor%20de%20Portugu%C3%AAs." class="btn-whatsapp" target="_blank" rel="noopener">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 3.5a9 9 0 0 1 8 8"/><path d="M13.5 7.5a5 5 0 0 1 4 4"/><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 3.4z"/></svg>
-      <span>Chamar no WhatsApp</span>
-    </a>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap-md">
-    <div class="brand serif">Kit Completo do Professor de Português</div>
-    <div class="copy" id="footerYear">© 2026 · Todos os direitos reservados.</div>
-    <p class="disclaimer">Este produto oferece recursos pedagógicos e não garante resultados específicos de aprendizagem.</p>
-  </div>
-</footer>
-
-
-<!-- Upgrade offer. Opens only from the R$10 button; hidden until then. -->
-<div class="upsell" id="upsell" hidden>
-  <div class="upsell__overlay" data-upsell-dismiss></div>
-  <div class="upsell__card" role="dialog" aria-modal="true" aria-labelledby="upsellTitle" aria-describedby="upsellSub">
-    <button class="upsell__close" type="button" aria-label="Fechar" data-upsell-dismiss>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-    </button>
-
-    <span class="upsell__seal"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-1px;margin-right:3px"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>Oferta Especial de Upgrade</span>
-    <h2 class="upsell__title" id="upsellTitle">Espere! Leve o Kit Completo</h2>
-    <p class="upsell__sub" id="upsellSub">Leve a versão completa com todo o material do 6º ao Ensino Médio por um preço exclusivo.</p>
-
-    <div class="upsell__offer-card">
-      <div class="upsell__offer-header">
-        <span class="upsell__tag"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:-1px;margin-right:2px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>MELHOR OPÇÃO</span>
-        <div class="upsell__pricing">
-          <span class="upsell__old-price">De R$ 25,90</span>
-          <div class="upsell__main-price">
-            <span class="upsell__currency">R$</span>
-            <strong class="upsell__value" data-upsell-price>17,90</strong>
-          </div>
+        <div class="hero-visual">
+          <img src="https://kitportugues.space/assets/images/hero-kit.png?v=2" alt="Cadernos de provas e atividades de Português ao lado de um notebook exibindo um slide sobre predicado verbal" />
         </div>
       </div>
 
-      <div class="upsell__offer-diff">
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-2px;margin-right:4px;color:#E8C468"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3z"/></svg>Apenas +R$ 5,90 de diferença do Plano Básico
+      <div class="container stats-grid">
+        <div class="stat"><strong>+1.500</strong><span>Atividades e provas</span></div>
+        <div class="stat"><strong>6º ao 9º</strong><span>Fundamental II</span></div>
+        <div class="stat"><strong>1º ao 3º</strong><span>Ensino Médio</span></div>
+        <div class="stat"><strong>BNCC</strong><span>Alinhado ao currículo</span></div>
       </div>
+    </section>
 
-      <ul class="upsell__features">
-        <li>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-          <span><strong>+1.500 Atividades e Provas</strong> com gabarito</span>
-        </li>
-        <li>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-          <span><strong>Slides de Aula e Flashcards</strong> prontos</span>
-        </li>
-        <li>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-          <span><strong>Kit Aula de Emergência</strong> + Simulados ENEM</span>
-        </li>
-        <li>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-          <span><strong>Do 6º ano ao Ensino Médio</strong> · Acesso vitalício</span>
-        </li>
-      </ul>
+    <section class="section light-problem">
+      <div class="container narrow center">
+        <span class="tag">Menos tempo planejando. Mais tempo ensinando.</span>
+        <h2>Você não precisa perder seu tempo livre criando tudo do zero</h2>
+        <div class="pain-list">
+          <div><span class="x">✕</span> Passar horas procurando atividades na internet</div>
+          <div><span class="x">✕</span> Criar provas, questões e gabaritos do zero</div>
+          <div><span class="x">✕</span> Gastar o final de semana montando slides e planos de aula</div>
+          <div><span class="x">✕</span> Improvisar quando surge uma aula ou um imprevisto</div>
+        </div>
+        <a class="btn btn-dark" href="#precos">Quero economizar horas de planejamento</a>
+      </div>
+    </section>
+
+    <section class="section benefits section-cream">
+      <div class="container center">
+        <span class="tag">Conheça o kit completo</span>
+        <h2>O que você vai receber:</h2>
+        <p class="lead">Uma biblioteca completa para ensinar, revisar, avaliar, recuperar alunos e preparar as turmas para o ENEM, do 6º ano ao Ensino Médio.</p>
+        <div class="benefit-grid">
+          <article class="benefit-card featured">
+            <div class="icon">✓</div><small>+1.500 atividades</small><h3>Atividades e Provas Prontas</h3><p>Exercícios e avaliações editáveis com gabarito, alinhados à BNCC.</p>
+          </article>
+          <article class="benefit-card">
+            <div class="icon">▣</div><small>Slides prontos</small><h3>Slides de Aula</h3><p>Apresentações organizadas por conteúdo, prontas para usar e alinhadas à BNCC.</p>
+          </article>
+          <article class="benefit-card">
+            <div class="icon">✦</div><small>Mapas Mentais</small><h3>Mapas Mentais</h3><p>Esquemas visuais para revisar e fixar os conteúdos conforme a BNCC.</p>
+          </article>
+          <article class="benefit-card">
+            <div class="icon">⚡</div><small>Kit emergência</small><h3>Kit Aula de Emergência</h3><p>Materiais coringa para aulas de última hora, alinhados à BNCC.</p>
+          </article>
+          <article class="benefit-card">
+            <div class="icon">★</div><small>Simulados</small><h3>Simulados estilo ENEM</h3><p>Questões no padrão ENEM para preparar suas turmas, alinhadas à BNCC.</p>
+          </article>
+        </div>
+        <a class="btn btn-primary" href="#precos">Quero acessar todos os materiais</a>
+      </div>
+    </section>
+
+    <section class="section samples">
+      <div class="container center">
+        <span class="tag">Amostras reais</span>
+        <h2>Conheça o material por dentro</h2>
+        <h3 class="gallery-title">Atividades e provas</h3>
+        <div class="gallery gallery-tall" aria-label="Amostras de atividades e provas">
+          <img src="https://kitportugues.space/assets/images/sample-1.jpg?v=5" alt="Atividade de Língua Portuguesa 1" loading="lazy" />
+          <img src="https://kitportugues.space/assets/images/sample-2.jpg?v=5" alt="Atividade de Língua Portuguesa 2" loading="lazy" />
+          <img src="https://kitportugues.space/assets/images/sample-3.jpg?v=5" alt="Atividade de Língua Portuguesa 3" loading="lazy" />
+          <img src="https://kitportugues.space/assets/images/sample-4.jpg?v=5" alt="Atividade de Língua Portuguesa 4" loading="lazy" />
+          <img src="https://kitportugues.space/assets/images/sample-5.jpg?v=5" alt="Prova de Língua Portuguesa 1" loading="lazy" />
+          <img src="https://kitportugues.space/assets/images/sample-6.jpg?v=5" alt="Prova de Língua Portuguesa 2" loading="lazy" />
+          <img src="https://kitportugues.space/assets/images/sample-7.jpg?v=5" alt="Prova de Língua Portuguesa 3" loading="lazy" />
+          <img src="https://kitportugues.space/assets/images/sample-8.jpg?v=5" alt="Prova de Língua Portuguesa 4" loading="lazy" />
+          <img src="https://kitportugues.space/assets/images/sample-9.jpg?v=5" alt="Prova de Língua Portuguesa 5" loading="lazy" />
+          <img src="https://kitportugues.space/assets/images/sample-10.jpg?v=5" alt="Prova de Língua Portuguesa 6" loading="lazy" />
+          <img src="https://kitportugues.space/assets/images/sample-11.jpg?v=5" alt="Atividade de Língua Portuguesa 5" loading="lazy" />
+          <img src="https://kitportugues.space/assets/images/sample-12.jpg?v=5" alt="Atividade de Língua Portuguesa 6" loading="lazy" />
+          <img src="https://kitportugues.space/assets/images/sample-13.jpg?v=5" alt="Atividade de Língua Portuguesa 7" loading="lazy" />
+        </div>
+
+        <h3 class="gallery-title maps-title">Mapas mentais</h3>
+        <div class="gallery gallery-wide" aria-label="Mapas mentais">
+          <img src="https://kitportugues.space/assets/images/mapa-mental-1.jpg?v=1" alt="Mapa mental Predicado" loading="lazy" />
+          <img src="https://kitportugues.space/assets/images/mapa-mental-2.jpg?v=1" alt="Mapa mental Figuras de Linguagem" loading="lazy" />
+          <img src="https://kitportugues.space/assets/images/mapa-mental-3.jpg?v=1" alt="Mapa mental Classes de Palavras" loading="lazy" />
+          <img src="https://kitportugues.space/assets/images/mapa-mental-4.jpg?v=1" alt="Mapa mental Concordância Verbal" loading="lazy" />
+          <img src="https://kitportugues.space/assets/images/mapa-mental-5.jpg?v=1" alt="Mapa mental Tipos de Texto" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section curriculum section-dark soft-dark">
+      <div class="container center">
+        <span class="tag tag-dark">Trilha completa</span>
+        <h2>Do 6º ano ao Ensino Médio</h2>
+        <p class="lead on-dark">Os assuntos que mais caem em prova, prontos do 6º ano ao Ensino Médio.</p>
+        <div class="curriculum-grid">
+          <article><div class="curr-icon">A</div><h3>Gramática</h3><ul><li>Classes de palavras</li><li>Predicado e sintaxe</li><li>Concordância verbal e nominal</li><li>Regência e crase</li><li>Orações coordenadas e subordinadas</li><li>Verbos e tempos verbais</li><li>Ortografia, acentuação e pontuação</li></ul></article>
+          <article><div class="curr-icon">⌕</div><h3>Leitura e interpretação</h3><ul><li>Gêneros textuais</li><li>Coesão e coerência</li><li>Sentido figurado</li><li>Figuras de linguagem</li><li>Inferência textual</li><li>Interpretação de tirinhas e charges</li></ul></article>
+          <article><div class="curr-icon">✎</div><h3>Produção de texto</h3><ul><li>Tipos de texto</li><li>Dissertação argumentativa</li><li>Redação nota 1000</li><li>Argumentação e persuasão</li><li>Elementos de coesão textual</li></ul></article>
+          <article><div class="curr-icon">★</div><h3>Preparação para o ENEM</h3><ul><li>Simulados estilo ENEM</li><li>Interpretação avançada</li><li>Escolas literárias</li><li>Variação linguística</li><li>Funções da linguagem</li></ul></article>
+        </div>
+        <p class="series-label">E tudo isso, organizado por série.</p>
+        <div class="series-pills"><span>6º ao 9º ano <b>Fundamental II</b></span><span>1º ao 3º ano <b>Ensino Médio</b></span></div>
+      </div>
+    </section>
+
+    <section id="precos" class="section pricing section-cream">
+      <div class="container center">
+        <span class="tag">Investimento</span>
+        <h2>Suas aulas prontas o ano inteiro</h2>
+        <p class="lead">Acesso imediato após a compra. Pagamento único, sem mensalidades.</p>
+        <div class="pricing-grid">
+          <article class="price-card basic">
+            <h3>Plano Básico</h3>
+            <div class="old-price">de R$ 27,90</div>
+            <div class="small-label">por apenas</div>
+            <div class="price">R$<strong>12,00</strong></div>
+            <div class="pay-once">Pagamento único</div>
+            <ul><li>100 atividades e provas</li><li>100 dinâmicas</li><li>Planos de aula</li><li>Suporte por e-mail</li><li>Acesso vitalício</li></ul>
+            <button class="btn btn-outline full" id="basicButton">Quero o plano básico</button>
+            <p class="secure">🔒 Compra segura · Acesso por e-mail</p>
+          </article>
+
+          <article class="price-card complete">
+            <div class="popular">Mais Escolhido</div>
+            <h3>Kit Completo</h3>
+            <div class="old-price">de R$ 67,90</div>
+            <div class="small-label">por apenas</div>
+            <div class="price">R$<strong>25,90</strong></div>
+            <div class="pay-once">Pagamento único</div>
+            <ul><li>Mais de 1.500 atividades e provas BNCC</li><li>Mais de 800 dinâmicas BNCC</li><li>Mapas mentais BNCC</li><li>Kit Aula de Emergência BNCC</li><li>Simulados estilo ENEM BNCC</li><li>Planos de aula BNCC</li><li>Flashcards prontos BNCC <b>BÔNUS</b></li><li>Slides prontos de Português BNCC <b>BÔNUS</b></li><li>Materiais do 6º ano ao Ensino Médio</li><li>Atualizações semanais</li><li>Suporte prioritário VIP</li><li>Garantia de 7 dias</li><li>Acesso vitalício</li></ul>
+            <a class="btn btn-primary full" href="https://pay.wiapy.com/31k2V64jZ0mj" target="_blank" rel="noopener">Quero o kit completo</a>
+            <p class="secure">🔒 Compra segura · Acesso por e-mail</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section delivery">
+      <div class="container center">
+        <span class="tag">Como funciona</span>
+        <h2>Entrega rápida, direto no seu WhatsApp</h2>
+        <div class="delivery-grid">
+          <article><div class="delivery-icon">↗</div><span>Entrega</span><h3>Envio pelo WhatsApp</h3><p>Depois da confirmação do pagamento, você recebe o acesso ao material direto no seu WhatsApp, de forma rápida e sem complicação.</p></article>
+          <article><div class="delivery-icon">◉</div><span>Suporte</span><h3>Atendimento 24 horas</h3><p>Qualquer dúvida antes ou depois da compra, nosso time está disponível a qualquer hora pra te ajudar.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials section-cream">
+      <div class="container center">
+        <span class="tag">Quem já usa aprova</span>
+        <h2>O que professores estão dizendo</h2>
+        <div class="testimonial-grid">
+          <article class="comment"><div class="comment-top"><img src="https://kitportugues.space/assets/images/depoimentos/camila.jpg?v=1" alt="Camila Ribeiro" /><div><strong>Camila.Ribeiro</strong><small>20 min · ❤️ pelo autor</small></div></div><p>Gente, esse kit salvou meu segundo semestre 😭🙏 as dinâmicas prontas são um golaço, uso pelo menos 3 por semana</p><div class="likes">♥ 91</div></article>
+          <article class="comment"><div class="comment-top"><img src="https://kitportugues.space/assets/images/depoimentos/eduardo.jpg?v=1" alt="Eduardo Santos" /><div><strong>Eduardo.Santos</strong><small>17 min · ❤️ pelo autor</small></div></div><p>Comprei meio na dúvida e me arrependo de não ter comprado antes. Os slides já vêm prontos, é só abrir e dar aula 🙌</p><div class="likes">♥ 64</div></article>
+          <article class="comment"><div class="comment-top"><img src="https://kitportugues.space/assets/images/depoimentos/beatriz.jpg?v=1" alt="Beatriz Lima" /><div><strong>Beatriz.Lima</strong><small>24 min · ❤️ pelo autor</small></div></div><p>Sou coordenadora e recomendei pra toda a equipe de Português da escola. Os mapas mentais principalmente, os alunos amaram pra revisar antes da prova</p><div class="likes">♥ 138</div></article>
+          <article class="comment"><div class="comment-top"><img src="https://kitportugues.space/assets/images/depoimentos/thiago.jpg?v=1" alt="Thiago Almeida" /><div><strong>Thiago.Almeida</strong><small>14 min · ❤️ pelo autor</small></div></div><p>Professor de redação aqui, os modelos nota 1000 comentados por competência ajudaram muito na hora de mostrar exemplo pros meus alunos do 3º ano</p><div class="likes">♥ 72</div></article>
+          <article class="comment"><div class="comment-top"><img src="https://kitportugues.space/assets/images/depoimentos/marcia.jpg?v=1" alt="Marcia Souza" /><div><strong>Marcia.Souza</strong><small>19 min · ❤️ pelo autor</small></div></div><p>Nunca vi um material organizado por bimestre desse jeito, professora há 12 anos e isso realmente economizou muito do meu final de semana</p><div class="likes">♥ 97</div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq">
+      <div class="container narrow">
+        <div class="center"><span class="tag">Perguntas frequentes</span><h2>Ainda tem dúvidas?</h2></div>
+        <div class="faq-list">
+          <details><summary>Para quais turmas os materiais servem?</summary><p>Os materiais foram organizados para professores que trabalham do 6º ao 9º ano e no Ensino Médio.</p></details>
+          <details><summary>Os materiais são alinhados à BNCC?</summary><p>Sim. Os materiais indicados na oferta são organizados considerando os conteúdos e as habilidades previstas para essas etapas.</p></details>
+          <details><summary>As atividades e provas possuem gabarito?</summary><p>As atividades e avaliações indicadas como acompanhadas de gabarito já incluem as respectivas respostas.</p></details>
+          <details><summary>Posso editar os materiais?</summary><p>Sim. Os arquivos editáveis podem ser adaptados para a escola, a série e o nível da turma.</p></details>
+          <details><summary>Como receberei o acesso?</summary><p>Após a confirmação do pagamento, as informações de acesso serão enviadas para o e-mail utilizado na compra.</p></details>
+          <details><summary>Posso utilizar os materiais no celular?</summary><p>Sim. Os materiais podem ser acessados pelo celular, tablet ou computador. Para editar e imprimir, o computador pode oferecer mais facilidade.</p></details>
+          <details><summary>Existe alguma mensalidade?</summary><p>Não. O pagamento é único.</p></details>
+          <details><summary>Por quanto tempo terei acesso?</summary><p>O acesso ao material adquirido é vitalício.</p></details>
+          <details><summary>Tenho garantia?</summary><p>Sim. Você terá 7 dias para conhecer o produto e solicitar o reembolso caso ele não atenda às suas necessidades.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta section-dark">
+      <div class="container narrow center">
+        <h2>Professor, tenha tudo o que precisa para suas aulas de Português em um único lugar</h2>
+        <p>Economize horas de planejamento com atividades, avaliações, aulas, revisões e materiais prontos para suas turmas o ano inteiro.</p>
+        <a class="btn btn-primary btn-lg" href="https://pay.wiapy.com/31k2V64jZ0mj" target="_blank" rel="noopener">Quero meu kit completo agora</a>
+        <p class="micro">Pagamento único · Acesso vitalício · Garantia de 7 dias</p>
+      </div>
+    </section>
+
+    <section class="support section">
+      <div class="container narrow center">
+        <span class="tag">Suporte</span>
+        <h2>Ficou com alguma dúvida?</h2>
+        <p class="lead">Fale direto com a gente pelo WhatsApp — respondemos rapidinho.</p>
+        <a class="btn btn-whatsapp" id="whatsappCta" href="#">Chamar no WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container center">
+      <strong>Kit Completo do Professor de Português</strong>
+      <p>© 2026 · Todos os direitos reservados.</p>
+      <small>Este produto oferece recursos pedagógicos e não garante resultados específicos de aprendizagem.</small>
     </div>
+  </footer>
 
-    <a href="#" class="btn-ink full upsell__accept" id="upsellAccept">
-      <span>Quero o kit completo</span>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-    </a>
-    <a href="#" class="upsell__decline" id="upsellDecline">Não, quero continuar apenas com o plano básico</a>
+  <a href="#" class="floating-whatsapp" id="floatingWhatsapp" aria-label="Falar pelo WhatsApp">✆</a>
+
+  <div class="modal" id="upsellModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="upsellTitle">
+      <button class="modal-close" data-close-modal aria-label="Fechar">×</button>
+      <span class="modal-kicker">Oferta Especial de Upgrade</span>
+      <h2 id="upsellTitle">Espere! Leve o Kit Completo</h2>
+      <p>Leve a versão completa com todo o material do 6º ao Ensino Médio por um preço exclusivo.</p>
+      <div class="modal-badge">MELHOR OPÇÃO</div>
+      <div class="modal-old">De R$ 25,90</div>
+      <div class="modal-price">R$ 17,90</div>
+      <div class="modal-diff">Apenas +R$ 5,90 de diferença do Plano Básico</div>
+      <ul><li>+1.500 Atividades e Provas com gabarito</li><li>Slides de Aula e Flashcards prontos</li><li>Kit Aula de Emergência + Simulados ENEM</li><li>Do 6º ano ao Ensino Médio · Acesso vitalício</li></ul>
+      <a class="btn btn-primary full" href="https://pay.wiapy.com/31k2V64jZ0mj" target="_blank" rel="noopener">Quero o kit completo</a>
+      <a class="basic-continue" id="basicCheckout" href="#">Não, quero continuar apenas com o plano básico</a>
+    </div>
   </div>
-</div>
 
-<script src="/assets/js/app.js?v=10" defer></script>
+  <script>
+// CONFIGURAÇÕES RÁPIDAS ----------------------------------------------------
+// Cole aqui o link de checkout do PLANO BÁSICO e o link do WhatsApp.
+const CONFIG = {
+  basicCheckoutUrl: "#", // ex.: https://pay.wiapy.com/SEU-CHECKOUT-BASICO
+  whatsappUrl: "#"       // ex.: https://wa.me/5571999999999?text=Ol%C3%A1...
+};
+
+// Contagem de 15 minutos a partir do carregamento da página.
+let secondsLeft = 15 * 60;
+const countdown = document.getElementById('countdown');
+function tickCountdown(){
+  const minutes = Math.floor(secondsLeft / 60);
+  const seconds = secondsLeft % 60;
+  countdown.textContent = `${String(minutes).padStart(2,'0')}:${String(seconds).padStart(2,'0')}`;
+  if(secondsLeft > 0) secondsLeft--;
+}
+tickCountdown();
+setInterval(tickCountdown, 1000);
+
+// Upsell do plano básico.
+const modal = document.getElementById('upsellModal');
+const basicButton = document.getElementById('basicButton');
+const basicCheckout = document.getElementById('basicCheckout');
+function openModal(){
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden','false');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(){
+  modal.classList.remove('open');
+  modal.setAttribute('aria-hidden','true');
+  document.body.style.overflow = '';
+}
+basicButton.addEventListener('click', openModal);
+modal.querySelectorAll('[data-close-modal]').forEach(el => el.addEventListener('click', closeModal));
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeModal(); });
+
+basicCheckout.href = CONFIG.basicCheckoutUrl;
+basicCheckout.addEventListener('click', (e) => {
+  if(CONFIG.basicCheckoutUrl === '#'){
+    e.preventDefault();
+    alert('Adicione o link do checkout básico dentro deste index.html, na configuração CONFIG.basicCheckoutUrl.');
+  }
+});
+
+// WhatsApp
+['whatsappCta','floatingWhatsapp'].forEach(id => {
+  const el = document.getElementById(id);
+  el.href = CONFIG.whatsappUrl;
+  el.addEventListener('click', (e) => {
+    if(CONFIG.whatsappUrl === '#'){
+      e.preventDefault();
+      alert('Adicione o link do WhatsApp dentro deste index.html, na configuração CONFIG.whatsappUrl.');
+    }
+  });
+});
+
+  </script>
 </body>
 </html>
